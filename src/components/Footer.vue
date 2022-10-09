@@ -8,7 +8,7 @@
         <div class="col">
           <h4>VPS Builder</h4>
           <ul classe="list">
-            <li><img src="src/components/logo.png" class="logo_f" alt="logo"/></li>
+            <li><img src="@/assets/logo.png" class="logo_f" alt="logo"/></li>
           </ul>
         </div>
 
@@ -30,7 +30,6 @@
             <li>Contact</li>
           </ul>
         </div>
-
       </div>
     </div>
   </div>
@@ -76,6 +75,11 @@ ul.list{
 li{
   padding: 8px;
   font-size: 25px;
+  list-style-type: none;
+}
+
+ul{
+  text-decoration: none;
 }
 
 h4{
