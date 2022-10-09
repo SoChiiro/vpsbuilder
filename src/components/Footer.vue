@@ -1,7 +1,6 @@
 <template>
-
+  <div class="trait-footer"></div>
   <div class="main-footer">
-    <div class="trait-footer"></div>
     <div class="container">
       <div class="row">
 
@@ -45,12 +44,9 @@ export default {
 }
 </script>
 
-
-
 <style scoped>
 
 .main-footer{
-  padding-top: 1000px;
   color: #fff;
   background-color: #11151C;
   padding-top: 3em;
@@ -63,7 +59,6 @@ export default {
   background: #364156;
   height: 10px;
   width: 100%;
-  margin-top: 20px;
 }
 
 ul.list{
