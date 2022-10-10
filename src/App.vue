@@ -1,7 +1,7 @@
 <template>
   <div>
     <BaseLayout>
-      <Builder/>
+      <BuilderPage/>
     </BaseLayout>
   </div>
 </template>
@@ -10,13 +10,13 @@
 
 import BaseLayout from "@/pages/BaseLayout";
 import HomePage from "@/pages/HomePage";
-import Builder from "@/pages/Builder";
+import BuilderPage from "@/pages/BuilderPage";
 
 export default {
   name: 'App',
   components: {
     // eslint-disable-next-line vue/no-unused-components
-    BaseLayout,HomePage,Builder
+    BaseLayout,HomePage,BuilderPage
   }
 }
 </script>
