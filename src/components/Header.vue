@@ -9,8 +9,9 @@
         <li class="connexion-header">Connexion</li>
       </ul>
     </div>
-    <div class="trait-header"></div>
-
+    <div class="container">
+      <img src="@/assets/logo.png" class="logo" alt="logo"/>
+    </div>
   </div>
 </template>
 
@@ -22,20 +23,21 @@ export default {
 </script>
 
 <style scoped>
-.container-h{
+.container{
+  background: #D9D9D9;
 }
-
 
 .Container-header{
   background: #11151C;
   width: 100%;
+  padding: 5px 0;
   display: inline-block;
 }
-
-.trait-header{
-  background: #364156;
-  height: 10px;
-  width: 100%;
+.logo{
+  text-align:center;
+  display:flex;
+  width: 250px;
+  height: 250px;
 }
 
 li{
