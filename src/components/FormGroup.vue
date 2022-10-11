@@ -4,6 +4,7 @@
         <input
             :type="type"
             :min= "min"
+            :max= "max"
             :step="step"
             :name="name"
             :id="id"
@@ -21,6 +22,7 @@ export default {
         type: String,
         label: String,
         min: String,
+        max: String,
         step: String,
         name: String,
         id: String,

@@ -41,7 +41,7 @@ export default {
   text-align:center;
   display:flex;
   width: 200px;
-  height: 2 00px;
+  height: 200px;
 }
 
 .nav-link{

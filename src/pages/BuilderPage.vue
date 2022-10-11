@@ -6,9 +6,10 @@
         <fieldset>
           <div v-for="field in fields" :key="field.id">
             <FormGroup
-              :type= "type"
+              :type= "field.type"
               :label= "field.label"
               :min= "field.min"
+              :max = "field.max"
               :step= "field.step"
               :name= "field.name"
               :id= "field.id"

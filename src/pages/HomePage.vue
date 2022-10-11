@@ -1,27 +1,27 @@
 <template>
   <div class="HomePage-container">
-    <h1 class="title-homepage">Why VPS Builder ? </h1>
+      <h1 class="title-homepage">Why VPS Builder ? </h1>
+      
+      <p class="text-hp"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis metus diam, ullamcorper lobortis malesuada eget, dictum quis magna. Sed orci justo, lacinia vitae lobortis vel,
+        dictum ut augue. Cras faucibus, tellus vitae maximus consequat, eros odio consequat nunc, vitae consequat odio mauris ut mauris. Mauris justo justo, sollicitudin in pretium eu, vehicula
+        eu dui . Aenean arcu dui, suscipit nec dui id, pharetra iaculis quam. Vestibulum in nisi magna. Maecenas vel ipsum lacus.</p>
+      
+      <Splide :options="{ rewind: true }" aria-label="Vue Splide Example">
+        <SplideSlide>
+          <img class="carousel-image" src="@/assets/jeune.jpg" alt="Sample 1">
+        </SplideSlide>
+        <SplideSlide>
+          <img class="carousel-image" src="@/assets/Serveur.jpg" alt="Sample 2">
+        </SplideSlide>
+      </Splide>
 
-    <p class="text-hp"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis metus diam, ullamcorper lobortis malesuada eget, dictum quis magna. Sed orci justo, lacinia vitae lobortis vel,
-      dictum ut augue. Cras faucibus, tellus vitae maximus consequat, eros odio consequat nunc, vitae consequat odio mauris ut mauris. Mauris justo justo, sollicitudin in pretium eu, vehicula
-      eu dui . Aenean arcu dui, suscipit nec dui id, pharetra iaculis quam. Vestibulum in nisi magna. Maecenas vel ipsum lacus.</p>
-
-    <Splide :options="{ rewind: true }" aria-label="Vue Splide Example">
-      <SplideSlide>
-        <img class="logo" src="@/assets/logo.png" alt="Sample 1">
-      </SplideSlide>
-      <SplideSlide>
-        <img class="logo" src="@/assets/logo.png" alt="Sample 2">
-      </SplideSlide>
-    </Splide>
-
-
-    <h1 class="title-homepage">You want a server ? </h1>
-
-    <!-- HTML !-->
-    <button class="button-28" role="button">YES !</button>
-
-
+      
+      <h1 class="title-homepage">You want a server ? </h1>
+      
+      <!-- HTML !-->
+      <button class="button-28" role="button">YES !</button>
+    
+      
   </div>
 </template>
 
@@ -61,6 +61,11 @@ export default defineComponent( {
 }
 
 /* Carrousel */
+
+.carousel-image{
+  width: 550px;
+  height : 550px;
+}
 
 SplideSlide{
   width: 70%;
