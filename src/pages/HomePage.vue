@@ -42,6 +42,12 @@ export default defineComponent( {
 .HomePage-container{
   background: #D9D9D9;
 }
+.logo{
+  text-align:center;
+  display:flex;
+  width: 250px;
+  height: 250px;
+}
 
 .title-homepage{
   text-align: center;

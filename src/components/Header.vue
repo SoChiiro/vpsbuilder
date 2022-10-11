@@ -1,24 +1,29 @@
 <template>
-  <div class="container-h">
-
-    <div class="Container-header">
-      <ul>
-        <li>Home</li>
-        <li>Build</li>
-        <li>About us</li>
-        <li class="connexion-header">Connexion</li>
-      </ul>
-    </div>
+  <div>
+    <nav class="Container-header">
+      <router-link class = 'nav-link' to = '/'>Home</router-link>
+      <router-link class = 'nav-link' to = '/buildVPS'>Build</router-link>
+      <router-link class = 'nav-link' to = '/about'>About us</router-link>
+      <router-link @click = 'hidden()' to = '/login' class="connexion-header nav-link">Login</router-link>
+    </nav>
     <div class="container">
       <img src="@/assets/logo.png" class="logo" alt="logo"/>
     </div>
+    <router-view/>
   </div>
 </template>
 
 <script>
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "Header"
+  name: "Header",
+  data: () => {
+    return {
+    }
+  },
+  methods :{
+
+  }
 }
 </script>
 
@@ -30,25 +35,24 @@ export default {
 .Container-header{
   background: #11151C;
   width: 100%;
-  padding: 5px 0;
   display: inline-block;
 }
 .logo{
   text-align:center;
   display:flex;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 2 00px;
 }
 
-li{
+.nav-link{
   text-decoration: none;
   display: inline-block;
-  margin: 10px;
+  margin: 30px;
   color: #FFFFFF;
   font-size: 25px;
 }
 
-li:hover{
+.nav-link:hover{
   color: gold;
   transition: 0.3s;
 }

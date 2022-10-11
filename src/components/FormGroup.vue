@@ -1,15 +1,15 @@
 <template>
     <div class="formbold-mb-5">
-        <label :for="id" class="formbold-form-label"> DISK STORAGE(MB) </label>
+        <label :for="id" class="formbold-form-label"> {{label}} </label>
         <input
-        type="number"
-        :min= "min"
-        :step="step"
-        :name="name"
-        :id="id"
-        :placeholder="placeholder"
-        class="formbold-form-input"
-    />
+            :type="type"
+            :min= "min"
+            :step="step"
+            :name="name"
+            :id="id"
+            :placeholder="placeholder"
+            class="formbold-form-input"
+        />
     </div>
 </template>
 
@@ -18,6 +18,8 @@
 export default {
   name: 'FormGroup',
   props: {
+        type: String,
+        label: String,
         min: String,
         step: String,
         name: String,
