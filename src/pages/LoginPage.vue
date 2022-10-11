@@ -2,9 +2,11 @@
     <div class="formbold-main-wrapper">
       
       <div class="formbold-form-wrapper">
-        
         <form action="" method="POST">
           <fieldset>
+            <div class="container title">
+              <p>WELCOME BACK !</p>
+            </div>
             <div v-for="field in fields" :key="field.id">
               <FormGroup
                 :type= "field.type"
@@ -13,10 +15,10 @@
                 />
             </div>
             <div class="container">
-              <button class="button-28">Login</button>
+              <router-link to="/home" class="button-28" @click="switchToHome()">Login</router-link>
             </div>
           </fieldset>
-          Vous n'etes pas encore inscrit? <router-link to = "/register">Creez un compte !</router-link>
+          Did not yet register ? <router-link to="/register" @click = "switchToRegister()" class = "link">Create an account !</router-link >
         </form>
       </div>
     </div>
@@ -34,21 +36,34 @@
           fields: LoginFields,
         }
       },
-      components: { FormGroup }
+      components: { FormGroup },
+      methods:{
+        switchToRegister() {this.$store.commit('setView','register')},
+        switchToHome() {this.$store.commit('setView','home')}
+      },
   }
   
   </script>
   
   <style scoped>
-  body {
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  }
+  
   .container{
     display: flex;
     justify-content: center;
   }
-  
-  
+  .title{
+    padding: 15px 0;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .link{
+    border: 0;
+    background: transparent;
+    font-size: 16px;
+    text-decoration: underline;
+    color:blue;
+    cursor: pointer;
+  }
   /* Button */
   /* CSS */
   .button-28 {
@@ -96,6 +111,7 @@
     transform: translateY(0);
   }
   * {
+      font-family:sans-serif;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -106,6 +122,8 @@
       justify-content: center;
       background: #D9D9D9;
       padding: 48px;
+      width: 100vw;
+      height: 100vh;
     }
     
     .formbold-form-wrapper {

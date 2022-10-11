@@ -13,9 +13,10 @@
                 />
             </div>
             <div class="container">
-              <button class="button-28">Login</button>
+              <button class="button-28">Register</button>
             </div>
           </fieldset>
+          Already have an account ? <router-link to="/login" @click = "switchToLogin()" class = "link">Log in !</router-link >
         </form>
       </div>
     </div>
@@ -33,7 +34,10 @@
           fields: RegisterFields,
         }
       },
-      components: { FormGroup }
+      components: { FormGroup },
+      methods:{
+        switchToLogin() {this.$store.commit('setView','login')}
+      },
   }
   
   </script>
@@ -86,7 +90,7 @@
     color: #fff;
     background-color: #11151C;
     border: 2px solid black;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    box-shadow: #00000040 0 8px 15px;
     transform: translateY(-2px);
   }
   
@@ -94,7 +98,16 @@
     box-shadow: none;
     transform: translateY(0);
   }
+  .link{
+    border: 0;
+    background: transparent;
+    font-size: 16px;
+    text-decoration: underline;
+    color:blue;
+    cursor: pointer;
+  }
   * {
+      font-family:sans-serif;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -105,6 +118,8 @@
       justify-content: center;
       background: #D9D9D9;
       padding: 48px;
+      width: 100vw;
+      height: 100vh;
     }
     
     .formbold-form-wrapper {

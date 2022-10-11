@@ -1,8 +1,8 @@
 export default [
     {
-        type: "email",
-        label: "EMAIL",
-        placeholder: "ENTER YOUR EMAIL",
+        type: "text",
+        label: "PSEUDO",
+        placeholder: "ENTER YOUR PSEUDO",
     },
     {
         type: "password",

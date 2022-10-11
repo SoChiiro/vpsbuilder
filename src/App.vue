@@ -1,23 +1,30 @@
 <template>
-  <div>
-    <BaseLayout>
-
-    </BaseLayout>
-  </div>
+  <LoginPage v-if="view === 'login'"/>
+  <RegisterPage v-if="view === 'register'"/>
+  <BaseLayout v-if="view === 'home'">
+  </BaseLayout>
 </template>
 
 <script>
 
 import BaseLayout from "@/pages/BaseLayout";
-import HomePage from "@/pages/HomePage";
-import BuilderPage from "@/pages/BuilderPage";
+// import HomePage from "@/pages/HomePage";
+import LoginPage from "./pages/LoginPage.vue";
+import RegisterPage from "./pages/RegisterPage.vue";
 
 export default {
   name: 'App',
   components: {
     // eslint-disable-next-line vue/no-unused-components
-    BaseLayout,HomePage,BuilderPage
+    BaseLayout,
+    // HomePage,
+    LoginPage,
+    RegisterPage,
+  },
+  computed:{
+    view() { return this.$store.getters.getView }
   }
+
 }
 </script>
 
@@ -25,6 +32,6 @@ export default {
 
 *{
   padding: 0;
-  margin : auto
+  margin : auto;
 }
 </style>

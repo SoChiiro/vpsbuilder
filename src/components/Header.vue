@@ -4,7 +4,7 @@
       <router-link class = 'nav-link' to = '/'>Home</router-link>
       <router-link class = 'nav-link' to = '/buildVPS'>Build</router-link>
       <router-link class = 'nav-link' to = '/about'>About us</router-link>
-      <router-link @click = 'hidden()' to = '/login' class="connexion-header nav-link">Login</router-link>
+      <router-link to = '/login' @click="switchToLogin()" class="connexion-header nav-link">Logout</router-link>
     </nav>
     <div class="container">
       <img src="@/assets/logo.png" class="logo" alt="logo"/>
@@ -21,9 +21,9 @@ export default {
     return {
     }
   },
-  methods :{
-
-  }
+  methods:{
+    switchToLogin() {this.$store.commit('setView','login')}
+      },
 }
 </script>
 

@@ -27,7 +27,7 @@ export default [
         type: "date",
         id: "datenaiss",
         name: "datenaiss",
-        label: "BIRTDHATE",
+        label: "BIRTHDATE",
         placeholder: "ENTER YOUR BIRTHDATE",
     },
 ];
