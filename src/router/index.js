@@ -1,14 +1,12 @@
 import { createRouter,createWebHistory } from "vue-router";
-import HomePage from '@/pages/HomePage.vue';
 import BuilderPage from '@/pages/BuilderPage.vue';
 import Login from '@/pages/LoginPage.vue'
-import Register from '@/pages/RegisterPage.vue'
 
 const routes = [
     {
         name: 'Home',
         path : '/',
-        component: HomePage
+        component: () => import("../pages/HomePage")
     },    {
         name: 'Builder',
         path : '/buildVPS',
@@ -20,9 +18,10 @@ const routes = [
     },    {
         name: 'Register',
         path : '/register',
-        component: Register
+        component: () => import("../pages/RegisterPage")
     },
 ];
+
 
 export const router = createRouter({
     history: createWebHistory(),

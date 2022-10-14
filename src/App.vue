@@ -2,6 +2,7 @@
   <LoginPage v-if="view === 'login'"/>
   <RegisterPage v-if="view === 'register'"/>
   <BaseLayout v-if="view === 'home'">
+    <router-view/>
   </BaseLayout>
 </template>
 
@@ -10,7 +11,7 @@
 import BaseLayout from "@/pages/BaseLayout";
 // import HomePage from "@/pages/HomePage";
 import LoginPage from "./pages/LoginPage.vue";
-import RegisterPage from "./pages/RegisterPage.vue";
+import RegisterPage from "@/pages/RegisterPage.vue";
 
 export default {
   name: 'App',
