@@ -6,6 +6,7 @@
       <router-link class = 'nav-link' to = '/about'>About us</router-link>
       <router-link to = '/login' @click="switchToLogin()" class="connexion-header nav-link">Logout</router-link>
     </nav>
+    <div class="trait-footer"></div>
     <div class="container">
       <img src="@/assets/logo.png" class="logo" alt="logo"/>
     </div>
@@ -31,6 +32,14 @@ export default {
 .container{
   background: #D9D9D9;
 }
+
+
+.trait-footer{
+  background: #364156;
+  height: 10px;
+  width: 100%;
+}
+
 
 .Container-header{
   background: #11151C;

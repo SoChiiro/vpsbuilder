@@ -4,8 +4,8 @@
 
                 <p><input type="text" placeholder="email" v-model="email"/> </p>
                 <p><input type="password" placeholder="password" v-model="password"/> </p>
-              <button class="button-28" @click="register">Register</button>
-              <button class="button-28" @click="signInWithGoogle">Register with Google</button>
+                <p><button class="button-28" @click="register">Register</button></p>
+                <p><button class="button-28" @click="signInWithGoogle">Register with Google</button></p>
 
             </div>
           Already have an account ? <router-link to="/login" @click = "switchToLogin()" class = "link">Log in !</router-link >
@@ -15,7 +15,12 @@
 
   <script setup>
     import {ref} from "vue";
-    import {getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup} from "firebase/auth";
+    import {
+      getAuth,
+      createUserWithEmailAndPassword,
+      GoogleAuthProvider,
+      signInWithPopup,
+    } from "firebase/auth";
     import { useRouter} from 'vue-router' // import router
     const email = ref("");
     const password = ref("")
@@ -49,8 +54,6 @@
     };
 
   </script>
-
-
   <style scoped>
   body {
     font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
@@ -139,5 +142,4 @@
       background: #D9D9D9;
     }
   </style>
-  
-  
+
