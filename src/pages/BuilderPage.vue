@@ -1,6 +1,8 @@
 <template>
+
+  <p class="text-hp">Here you have to choose how to build your vps builder. For this you have to choose your DISK STORAGE which corresponds to
+    the memory that your VPS will have. MEMERY size corresponds to the RAM that your VPS will have and finally the power of your CPU.</p>
   <div class="formbold-main-wrapper">
-    
     <div class="formbold-form-wrapper">
       <form action="" method="POST">
         <fieldset>
@@ -19,6 +21,7 @@
           <div class="container">
             <button class="button-28">GO !</button>
           </div>
+          <br>
         </fieldset>
       </form>
     </div>
@@ -50,6 +53,13 @@ body {
   justify-content: center;
 }
 
+.text-hp{
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  background-color: #D9D9D9;
+  text-decoration: underline;
+}
 
 /* Button */
 /* CSS */
@@ -83,6 +93,7 @@ body {
   text-align: center;
   justify-content: center;
   display: flex;
+  background-color: #D9D9D9;
 }
 
 .button-28:hover {
@@ -97,6 +108,7 @@ body {
   box-shadow: none;
   transform: translateY(0);
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -115,7 +127,9 @@ body {
     max-width: 700px;
     padding: 2px;
     width: 100%;
-    background: #D9D9D9;
+    background: #364156;
   }
+
+
 </style>
 

@@ -2,7 +2,6 @@
   <LoginPage v-if="view === 'login'"/>
   <RegisterPage v-if="view === 'register'"/>
   <BaseLayout v-if="view === 'home'">
-    <router-view/>
   </BaseLayout>
 </template>
 
