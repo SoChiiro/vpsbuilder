@@ -148,7 +148,6 @@ path{
 .video_nuage{
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-  margin-top: 50px;
   margin-bottom: 80px;
 }
 
