@@ -13,7 +13,7 @@
 
       <h1 class="title-homepage">Why a VPS Builder ? </h1>
 
-      <p class="text-hp"> For many businesses, a VPS, or Virtual Private Server, is the perfect option for website hosting because: A VPS can be faster and more stable than other types of hosting.
+      <p class="ui segment grey text-hp"> For many businesses, a VPS, or Virtual Private Server, is the perfect option for website hosting because: A VPS can be faster and more stable than other types of hosting.
         A VPS can improve the experience of customers visiting you online. A VPS is often the best balance of cost and performance.</p>
 
       <br>
@@ -59,13 +59,6 @@ export default defineComponent( {
 
 .HomePage-container{
   background: #D9D9D9;
-}
-
-.logo{
-  text-align:center;
-  display:flex;
-  width: 250px;
-  height: 250px;
 }
 
 .title-homepage{
