@@ -11,6 +11,7 @@ import BaseLayout from "@/pages/BaseLayout";
 import LoginPage from "./pages/LoginPage.vue";
 import RegisterPage from "@/pages/RegisterPage.vue";
 import BuilderChoice from "@/pages/BuilderChoice";
+import Windows from "@/pages/Windows";
 
 export default {
   name: 'App',
@@ -22,6 +23,8 @@ export default {
     RegisterPage,
     // eslint-disable-next-line vue/no-unused-components
     BuilderChoice,
+    // eslint-disable-next-line vue/no-unused-components
+    Windows,
   },
   computed:{
     view() { return this.$store.getters.getView }

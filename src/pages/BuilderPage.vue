@@ -1,5 +1,5 @@
 <template>
-
+  <h1>CHOOSE YOUR BUILD</h1>
   <p class="text-hp">Here you have to choose how to build your vps builder. For this you have to choose your DISK STORAGE which corresponds to
     the memory that your VPS will have. MEMERY size corresponds to the RAM that your VPS will have and finally the power of your CPU.</p>
   <div class="formbold-main-wrapper">
@@ -53,12 +53,24 @@ body {
   justify-content: center;
 }
 
+h1{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 100px;
+  font-weight: bold;
+  color: #364156;
+  text-align: center;
+  letter-spacing: 5px;
+  text-shadow: 2px 7px 5px rgba(0,0,0,0.3),
+  0px -4px 10px rgba(255,255,255,0.3);
+  background: #D9D9D9;
+}
+
 .text-hp{
-  width: 100%;
   text-align: center;
   margin: auto;
   background-color: #D9D9D9;
   text-decoration: underline;
+  font-size: 25px;
 }
 
 /* Button */

@@ -23,6 +23,10 @@ const routes = [
         name: 'BuilderChoice',
         path : '/BuilderChoice',
         component: () => import("../pages/BuilderChoice")
+    },{
+        name: 'Windows',
+        path : '/Windows',
+        component: () => import("../pages/Windows")
     },
 
 ];

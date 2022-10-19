@@ -1,15 +1,15 @@
 <template>
 
   <h1>CHOOSE YOUR OS</h1>
-  <p class="text-build" >To start making your VPS you must first choose your OS. You can choose between: Windows, Linux and MAC. Be careful the choice of your bone will have consequences on the choice of the components and the price. Note that the choice of the OS will also impact the hosting countries.
+  <p class="text-build" >To start making your VPS you must first choose your OS. You can choose between: Windows, Linux and MAC. Be careful the choice of your OS will have consequences on the choice of the components and the price. Note that the choice of the OS will also impact the hosting countries.
     Once you have made your choice we will offer you different pre-builds for your VPS that you can modify with some leeway. Thank you for trusting us.
     </p>
   <div class="os-container">
 
-    <div class="ui raised padded container segment" >
+    <router-link to = '/Windows' ><div class="ui raised padded container segment" >
       <p>WINDOWS</p>
       <img src="@/assets/windows_logo.png" class="logo-windows" alt="logo_windows"/>
-    </div>
+    </div></router-link>
 
     <div class="ui raised padded container segment">
       <p>LINUX</p>
