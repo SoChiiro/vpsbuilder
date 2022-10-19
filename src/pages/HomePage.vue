@@ -13,17 +13,11 @@
 
       <h1 class="title-homepage">Why a VPS Builder ? </h1>
 
-      <p class="ui segment grey text-hp"> For many businesses, a VPS, or Virtual Private Server, is the perfect option for website hosting because: A VPS can be faster and more stable than other types of hosting.
+      <p class="text-hp"> For many businesses, a VPS, or Virtual Private Server, is the perfect option for website hosting because: A VPS can be faster and more stable than other types of hosting.
         A VPS can improve the experience of customers visiting you online. A VPS is often the best balance of cost and performance.</p>
 
       <br>
       <br>
-
-    <sui-card><sui-card-content>
-      <sui-card-header>Kristy</sui-card-header>
-      <sui-card-meta>Joined in 2013</sui-card-meta>
-      <sui-card-description>Kristy is an art director living in New York.</sui-card-description>
-    </sui-card-content></sui-card>
 
     <h1 class="title-homepage">OUR LOCALS </h1>
       <Splide :options="{ rewind: true }" aria-label="Vue Splide Example">
@@ -41,8 +35,7 @@
     <br><br>
       <h1 class="title-homepage">You want a server ? </h1>
     <br>
-      <!-- HTML !-->
-      <button class="button-28" to = '/buildVPS' role="button">YES !</button>
+    <router-link class="button-28" to = '/BuilderChoice' >YES !</router-link>
     <br><br><br>
     
       
@@ -75,7 +68,9 @@ export default defineComponent( {
 
 .text-hp{
   width: 60%;
-  margin-top:25px
+  margin-top:25px;
+  margin: auto;
+  text-align: center;
 }
 
 /* Carrousel */
@@ -129,6 +124,7 @@ path{
   text-align: center;
   justify-content: center;
   display: flex;
+  margin: auto;
 }
 
 .button-28:hover {
