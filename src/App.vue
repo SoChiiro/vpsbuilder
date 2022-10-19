@@ -8,9 +8,9 @@
 <script>
 
 import BaseLayout from "@/pages/BaseLayout";
-// import HomePage from "@/pages/HomePage";
 import LoginPage from "./pages/LoginPage.vue";
 import RegisterPage from "@/pages/RegisterPage.vue";
+import BuilderChoice from "@/pages/BuilderChoice";
 
 export default {
   name: 'App',
@@ -20,6 +20,8 @@ export default {
     // HomePage,
     LoginPage,
     RegisterPage,
+    // eslint-disable-next-line vue/no-unused-components
+    BuilderChoice,
   },
   computed:{
     view() { return this.$store.getters.getView }

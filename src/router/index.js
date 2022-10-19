@@ -19,7 +19,12 @@ const routes = [
         name: 'Register',
         path : '/register',
         component: () => import("../pages/RegisterPage")
+    },{
+        name: 'BuilderChoice',
+        path : '/BuilderChoice',
+        component: () => import("../pages/BuilderChoice")
     },
+
 ];
 
 
