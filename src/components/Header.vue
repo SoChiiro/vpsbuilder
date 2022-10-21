@@ -1,13 +1,16 @@
 <template>
   <div>
     <nav class="Container-header">
-      <router-link class = 'nav-link' to = '/'>Home</router-link>
-      <router-link class = 'nav-link' to = '/buildVPS'>Build</router-link>
-      <router-link class = 'nav-link' to = '/about'>About us</router-link>
-      <router-link to = '/login' @click="switchToLogin()" class="connexion-header nav-link">Logout</router-link>
+      <ul>
+        <li><router-link class = 'nav-link' to = '/'><img src="@/assets/Logo-blue.png" class="logo-header" alt="logo"/></router-link></li>
+        <li><router-link class = 'nav-link' to = '/builderChoice'>Build</router-link></li>
+        <li><router-link class = 'nav-link' to = '/about'>About us</router-link></li>
+        <li><router-link class="login-text" to = '/login' @click="switchToLogin()" >Log Out</router-link></li>
+      </ul>
     </nav>
+    <div class="trait-footer"></div>
     <div class="container">
-      <img src="@/assets/logo.png" class="logo" alt="logo"/>
+
     </div>
     <router-view/>
   </div>
@@ -28,28 +31,40 @@ export default {
 </script>
 
 <style scoped>
+
 .container{
   background: #D9D9D9;
+}
+
+li{
+  display : inline;
+}
+
+.trait-footer{
+  background: #364156;
+  height: 10px;
+  width: 100%;
 }
 
 .Container-header{
   background: #11151C;
   width: 100%;
   display: inline-block;
+  height: 120px;
 }
-.logo{
-  text-align:center;
-  display:flex;
-  width: 200px;
-  height: 200px;
+
+.logo-header {
+  display: inline-block;
+  width: 120px;
+  height: 80px;
+  margin-top: 9px;
 }
 
 .nav-link{
   text-decoration: none;
-  display: inline-block;
-  margin: 30px;
+  margin: 25px;
   color: #FFFFFF;
-  font-size: 25px;
+  font-size: 50px;
 }
 
 .nav-link:hover{
@@ -57,9 +72,13 @@ export default {
   transition: 0.3s;
 }
 
-.connexion-header{
-  float: right;
-  text-underline: gold;
+.login-text{
   text-decoration: underline;
+  margin: 25px;
+  color: #FFFFFF;
+  font-size: 50px;
+  float: right;
+  margin-top: 52px;
 }
+
 </style>

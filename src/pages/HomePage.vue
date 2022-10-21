@@ -1,11 +1,25 @@
 <template>
   <div class="HomePage-container">
-      <h1 class="title-homepage">Why VPS Builder ? </h1>
+
+      <video class="video_nuage" autoplay loop>
+        <source src="../assets/nuage.mp4" type=video/mp4 >
+      </video>
+      <h1 class="title-homepage">What is a VPS builder ? </h1>
       
-      <p class="text-hp"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis metus diam, ullamcorper lobortis malesuada eget, dictum quis magna. Sed orci justo, lacinia vitae lobortis vel,
-        dictum ut augue. Cras faucibus, tellus vitae maximus consequat, eros odio consequat nunc, vitae consequat odio mauris ut mauris. Mauris justo justo, sollicitudin in pretium eu, vehicula
-        eu dui . Aenean arcu dui, suscipit nec dui id, pharetra iaculis quam. Vestibulum in nisi magna. Maecenas vel ipsum lacus.</p>
-      
+      <p class="text-hp"> A virtual private server, also known as a VPS, acts as an isolated, virtual environment on a physical server, which is owned and operated by a cloud or web hosting provider.
+        VPS hosting uses virtualization technology to split a single physical machine into multiple private server environments that share the resources.</p>
+
+      <br>
+
+      <h1 class="title-homepage">Why a VPS Builder ? </h1>
+
+      <p class="text-hp"> For many businesses, a VPS, or Virtual Private Server, is the perfect option for website hosting because: A VPS can be faster and more stable than other types of hosting.
+        A VPS can improve the experience of customers visiting you online. A VPS is often the best balance of cost and performance.</p>
+
+      <br>
+      <br>
+
+    <h1 class="title-homepage">OUR LOCALS </h1>
       <Splide :options="{ rewind: true }" aria-label="Vue Splide Example">
         <SplideSlide>
           <img class="carousel-image" src="@/assets/jeune.jpg" alt="Sample 1">
@@ -13,13 +27,16 @@
         <SplideSlide>
           <img class="carousel-image" src="@/assets/Serveur.jpg" alt="Sample 2">
         </SplideSlide>
+        <SplideSlide>
+          <img class="carousel-image" src="@/assets/bureaux.jpg" alt="Sample 3">
+        </SplideSlide>
       </Splide>
 
-      
+    <br><br>
       <h1 class="title-homepage">You want a server ? </h1>
-      
-      <!-- HTML !-->
-      <button class="button-28" role="button">YES !</button>
+    <br>
+    <router-link class="button-28" to = '/BuilderChoice' >YES !</router-link>
+    <br><br><br>
     
       
   </div>
@@ -42,12 +59,6 @@ export default defineComponent( {
 .HomePage-container{
   background: #D9D9D9;
 }
-.logo{
-  text-align:center;
-  display:flex;
-  width: 250px;
-  height: 250px;
-}
 
 .title-homepage{
   text-align: center;
@@ -57,24 +68,31 @@ export default defineComponent( {
 
 .text-hp{
   width: 60%;
-  margin-top:25px
+  margin-top:25px;
+  margin: auto;
+  text-align: center;
 }
 
 /* Carrousel */
 
 .carousel-image{
-  width: 550px;
-  height : 550px;
+  width: 900px;
+  height: 500px;
+  text-align:center;
+  margin:auto;
+  display:flex;
 }
 
 SplideSlide{
   width: 70%;
   background: #11151C;
+
 }
 
 path{
   contain: content;
   display: flex;
+
 }
 
 /* Button */
@@ -106,20 +124,27 @@ path{
   text-align: center;
   justify-content: center;
   display: flex;
+  margin: auto;
 }
 
 .button-28:hover {
   color: #fff;
   background-color: #11151C;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  box-shadow: rgb(17, 21, 28) 0 10px 17px;
   transform: translateY(-2px);
 }
+
 
 .button-28:active {
   box-shadow: none;
   transform: translateY(0);
 }
 
+.video_nuage{
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  margin-bottom: 80px;
+}
 
 
 </style>

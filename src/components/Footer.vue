@@ -7,7 +7,7 @@
         <div class="col">
           <h4>VPS Builder</h4>
           <ul classe="list">
-            <li><img src="@/assets/logo.png" class="logo_f" alt="logo"/></li>
+            <li><img src="@/assets/logo-white.png" class="logo_f" alt="logo"/></li>
           </ul>
         </div>
 

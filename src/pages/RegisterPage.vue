@@ -1,85 +1,59 @@
 <template>
     <div class="formbold-main-wrapper">
-      
-      <div class="formbold-form-wrapper">
-        
-        <form action="" method="POST">
-          <fieldset>
-            <div class="formbold-mb-5">
-              <label for="pseudo" class="formbold-form-label"> PSEUDO </label>
-              <input
-                  type= "text"
-                  id= "pseudo"
-                  name= "pseudo"
-                  label= "PSEUDO"
-                  placeholder= "ENTER YOUR PSEUDO"
-              />
-              <label for="email" class="formbold-form-label"> EMAIL </label>
-              
-              <input
-                  type= "email"
-                  id= "email"
-                  name= "email"
-                  label= "EMAIL"
-                  placeholder= "ENTER YOUR EMAIL"
-              />
-              
-              <label for="pwd" class="formbold-form-label"> PASSWORD </label>
-              <input
-                  type= "password"
-                  id= "pwd"
-                  name= "pwd"
-                  label= "PASSWORD"
-                  placeholder= "ENTER YOUR PASSWORD"
-              />
-              
-              <label for="cfpwd" class="formbold-form-label"> CONFIRM PASSWORD </label>
-              <input
-                  type= "password"
-                  id= "cfpwd"
-                  name= "cfpwd"
-                  label= "CONFIRM PASSWORD"
-                  placeholder= "CONFIRM YOUR PASSWORD"
-              />
-              <label for="datenaiss" class="formbold-form-label"> BIRTHDATE </label>
-              
-              <input
-                  type= "date"
-                  id= "datenaiss"
-                  name= "datenaiss"
-                  label= "BIRTHDATE"
-                  placeholder= "ENTER YOUR BIRTHDATE"
-              />
-            
-    
-            </div>
             <div class="container">
-              <button class="button-28">Register</button>
+
+                <p><input type="text" placeholder="email" v-model="email"/> </p>
+                <p><input type="password" placeholder="password" v-model="password"/> </p>
+                <p><button class="button-28" @click="register">Register</button></p>
+                <p><button class="button-28" @click="signInWithGoogle">Register with Google</button></p>
+
             </div>
-          </fieldset>
           Already have an account ? <router-link to="/login" @click = "switchToLogin()" class = "link">Log in !</router-link >
-        </form>
       </div>
-    </div>
   </template>
-  
-  <script>
-  export default {
-      // eslint-disable-next-line vue/multi-word-component-names
-      name: "Register",
-      data: () => {
-        return {
-          
-        }
-      },
-      components: { },
-      methods:{
-        switchToLogin() {this.$store.commit('setView','login')}
-      },
-  }
-  
+
+
+  <script setup>
+    import {ref} from "vue";
+    import {
+      getAuth,
+      createUserWithEmailAndPassword,
+      GoogleAuthProvider,
+      signInWithPopup,
+    } from "firebase/auth";
+    import { useRouter} from 'vue-router' // import router
+    const email = ref("");
+    const password = ref("")
+    const router = useRouter()
+
+    const register = () => {
+      // need .value because ref()
+      createUserWithEmailAndPassword(getAuth(), email.value, password.value)
+          // eslint-disable-next-line no-unused-vars
+          .then((data) => {
+            console.log("Successfully Registered !");
+            router.push('/buildVPS') // redirected to the Home
+          })
+          .catch((error) => {
+            console.log(error.code);
+            alert(error.code);
+          })
+
+    };
+
+    const signInWithGoogle = () => {
+      const provider = new GoogleAuthProvider();
+      signInWithPopup(getAuth(), provider)
+          .then((result) => {
+              console.log(result.user);
+              router.push("/buildVPS");
+          })
+          .catch((error) => {
+            console.log(error.code);
+          })
+    };
+
   </script>
-  
   <style scoped>
   body {
     font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
@@ -199,5 +173,4 @@
     resize: none;
 }
   </style>
-  
-  
+
