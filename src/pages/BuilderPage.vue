@@ -4,17 +4,37 @@
     <div class="formbold-form-wrapper">
       <form action="" method="POST">
         <fieldset>
-          <div v-for="field in fields" :key="field.id">
-            <FormGroup
-              :type= "field.type"
-              :label= "field.label"
-              :min= "field.min"
-              :max = "field.max"
-              :step= "field.step"
-              :name= "field.name"
-              :id= "field.id"
-              :placeholder= "field.placeholder"
-              />
+          <div class="formbold-mb-5">
+          <label for="storage" class="formbold-form-label"> DISK STORAGE(MB) </label>
+          <input
+            type= "number"
+            min= "8192"
+            max= "200480"
+            step= "1024"
+            name= "storage"
+            id= "storage"
+            placeholder= "ENTER THE DISK STORAGE (min : 8192 in MB)"
+          />
+          <label for="RAM" class="formbold-form-label"> MEMORY SIZE(MB) </label>
+          <input
+              type= "number"
+              min= "2048"
+              max="8192"
+              step= "1024"
+              name= "RAM"
+              id= "RAM"
+              placeholder= "ENTER THE MEMORY SIZE(min : 2048  in MB)"
+          />
+          <label for="cpu" class="formbold-form-label"> CPU FREQUENCY(GHz) </label>
+          <input
+              type= "number"
+              min= "2"
+              max= "6"
+              step= "0.1"
+              name= "cpu"
+              id= "cpu"
+              placeholder= "ENTER THE CPU FREQUENCY(min : 2 in GHz)"
+          />
           </div>
           <div class="container">
             <button class="button-28">GO !</button>
@@ -26,17 +46,14 @@
 </template>
 
 <script>
-import FormGroup from '@/components/FormGroup.vue';
-import BuildFields from '@/datas/BuildFields'
 
 export default {
     name: "BuilderPage",
     data: () => {
       return {
-        fields: BuildFields,
       }
     },
-    components: { FormGroup }
+    components: {  }
 }
 
 </script>
@@ -117,5 +134,34 @@ body {
     width: 100%;
     background: #D9D9D9;
   }
+
+  .formbold-mb-5 {
+    margin-bottom: 20px;
+    display : flex;
+    justify-content: space-between;
+    margin: 10% 5%;
+}
+.formbold-form-label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;    
+    align-self : center;
+    color: #07074d;
+    margin-bottom: 12px;
+    width : 25%;
+}
+/* form */
+.formbold-form-input {
+    width: 75%;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    outline: none;
+    resize: none;
+}
 </style>
 

@@ -11,6 +11,7 @@ import BaseLayout from "@/pages/BaseLayout";
 // import HomePage from "@/pages/HomePage";
 import LoginPage from "./pages/LoginPage.vue";
 import RegisterPage from "./pages/RegisterPage.vue";
+import './css/dist/output.css';
 
 export default {
   name: 'App',

@@ -9,6 +9,8 @@
             :name="name"
             :id="id"
             :placeholder="placeholder"
+            :click="clickHandler"
+            @click="clickHandler"
             class="formbold-form-input"
         />
     </div>
@@ -27,6 +29,7 @@ export default {
         name: String,
         id: String,
         placeholder: String,
+        clickHandler: Function
     }
 }
 

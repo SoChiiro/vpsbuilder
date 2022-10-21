@@ -5,12 +5,53 @@
         
         <form action="" method="POST">
           <fieldset>
-            <div v-for="field in fields" :key="field.id">
-              <FormGroup
-                :type= "field.type"
-                :label= "field.label"
-                :placeholder= "field.placeholder"
-                />
+            <div class="formbold-mb-5">
+              <label for="pseudo" class="formbold-form-label"> PSEUDO </label>
+              <input
+                  type= "text"
+                  id= "pseudo"
+                  name= "pseudo"
+                  label= "PSEUDO"
+                  placeholder= "ENTER YOUR PSEUDO"
+              />
+              <label for="email" class="formbold-form-label"> EMAIL </label>
+              
+              <input
+                  type= "email"
+                  id= "email"
+                  name= "email"
+                  label= "EMAIL"
+                  placeholder= "ENTER YOUR EMAIL"
+              />
+              
+              <label for="pwd" class="formbold-form-label"> PASSWORD </label>
+              <input
+                  type= "password"
+                  id= "pwd"
+                  name= "pwd"
+                  label= "PASSWORD"
+                  placeholder= "ENTER YOUR PASSWORD"
+              />
+              
+              <label for="cfpwd" class="formbold-form-label"> CONFIRM PASSWORD </label>
+              <input
+                  type= "password"
+                  id= "cfpwd"
+                  name= "cfpwd"
+                  label= "CONFIRM PASSWORD"
+                  placeholder= "CONFIRM YOUR PASSWORD"
+              />
+              <label for="datenaiss" class="formbold-form-label"> BIRTHDATE </label>
+              
+              <input
+                  type= "date"
+                  id= "datenaiss"
+                  name= "datenaiss"
+                  label= "BIRTHDATE"
+                  placeholder= "ENTER YOUR BIRTHDATE"
+              />
+            
+    
             </div>
             <div class="container">
               <button class="button-28">Register</button>
@@ -23,18 +64,15 @@
   </template>
   
   <script>
-  import FormGroup from '@/components/FormGroup.vue';
-  import RegisterFields from '@/datas/RegisterFields.js'
-  
   export default {
       // eslint-disable-next-line vue/multi-word-component-names
       name: "Register",
       data: () => {
         return {
-          fields: RegisterFields,
+          
         }
       },
-      components: { FormGroup },
+      components: { },
       methods:{
         switchToLogin() {this.$store.commit('setView','login')}
       },
@@ -114,6 +152,7 @@
     }
     .formbold-main-wrapper {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       background: #D9D9D9;
@@ -129,6 +168,36 @@
       width: 100%;
       background: #D9D9D9;
     }
+    .formbold-mb-5 {
+      display: flex;
+      flex-direction: column  ;
+    margin-bottom: 20px;
+    display : flex;
+    justify-content: space-between;
+    margin: 10% 5%;
+}
+.formbold-form-label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;    
+    align-self : center;
+    color: #07074d;
+    margin-bottom: 12px;
+    width : 25%;
+}
+/* form */
+.formbold-form-input {
+    width: 75%;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    outline: none;
+    resize: none;
+}
   </style>
   
   
