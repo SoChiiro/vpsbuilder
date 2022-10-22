@@ -3,7 +3,7 @@
     <div class="header">
       <img src="@/assets/logo.png" class="logo" alt="Logo" />
       <br>
-      <img src="@/assets/windows_logo.png" class="os-logo" alt="windows_logo" />
+      <img src="@/assets/mac_logo.png" class="os-logo" alt="mac_logo" />
       <br><br>
     </div>
     <Splide :options="{ rewind: true }" aria-label="Vue Splide Example">

@@ -3,7 +3,7 @@
     <div class="header">
       <img src="@/assets/logo.png" class="logo" alt="Logo" />
       <br>
-      <img src="@/assets/windows_logo.png" class="os-logo" alt="windows_logo" />
+      <img src="@/assets/linux_logo.png" class="os-logo" alt="linux_logo" />
       <br><br>
     </div>
     <Splide :options="{ rewind: true }" aria-label="Vue Splide Example">
@@ -101,7 +101,7 @@ import '@splidejs/vue-splide/css';
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Windows',
+  name: 'Linux',
   components: { Splide, SplideSlide },
 }
 </script>
