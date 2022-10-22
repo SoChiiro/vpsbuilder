@@ -6,15 +6,30 @@
       </video>
       <h1 class="title-homepage">What is a VPS builder ? </h1>
       
-      <p class="text-hp"> A virtual private server, also known as a VPS, acts as an isolated, virtual environment on a physical server, which is owned and operated by a cloud or web hosting provider.
-        VPS hosting uses virtualization technology to split a single physical machine into multiple private server environments that share the resources.</p>
+      <p class="text-hp"> A virtual private server is a type of server that provides a dedicated, isolated, and secure environment for users.
+        This type of server is perfect for hosting applications and websites that require high levels of security and privacy.
+        Virtual private servers can be purchased as a standalone service or can be included as part of a cloud hosting package.
+        A virtual private server is a great option for businesses that need high levels of security and privacy for their websites and applications.
+        Virtual private servers can be purchased as a standalone service or can be included as part of a cloud hosting package.
+        Cloud hosting packages can offer a number of advantages, including lower pricing and the ability to scale up or down as needed.
+        Virtual private servers are perfect for businesses that need a high level of security and privacy for their websites and applications.</p>
 
       <br>
 
       <h1 class="title-homepage">Why a VPS Builder ? </h1>
 
-      <p class="text-hp"> For many businesses, a VPS, or Virtual Private Server, is the perfect option for website hosting because: A VPS can be faster and more stable than other types of hosting.
-        A VPS can improve the experience of customers visiting you online. A VPS is often the best balance of cost and performance.</p>
+      <p class="text-hp"> There are a lot of reasons why virtual private server (VPS) hosting is considered the best type of hosting for your website.
+        Here are five of the most important reasons:</p>
+    <br>
+        <ul class="text-hp">
+          <li>Control: With VPS hosting, you have complete control over the operating system, software, and applications your site runs on.
+        You can install whatever you want, and you can even install separate servers for different purposes if you need to.
+      This flexibility is a big advantage over shared hosting, where the host provider controls everything.</li>
+          <br>
+          <li>Security: With VPS hosting, you’re protected from a whole host of security threats.
+        Your site is hosted on a separate server, which makes it harder for hackers to gain access. Plus, if you use a reputable provider,
+          your site will be backed up regularly, so you’ll always have a copy of your data.</li>
+    </ul>
 
       <br>
       <br>
@@ -33,7 +48,7 @@
       </Splide>
 
     <br><br>
-      <h1 class="title-homepage">You want a server ? </h1>
+      <h1 class="title-homepage">So, You want a server ? </h1>
     <br>
     <router-link class="button-28" to = '/BuilderChoice' >YES !</router-link>
     <br><br><br>
@@ -62,7 +77,7 @@ export default defineComponent( {
 
 .title-homepage{
   text-align: center;
-  font-size: 25px;
+  font-size: 45px;
   font: bold;
 }
 
@@ -71,6 +86,7 @@ export default defineComponent( {
   margin-top:25px;
   margin: auto;
   text-align: center;
+  font-size: 20px;
 }
 
 /* Carrousel */

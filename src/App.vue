@@ -14,6 +14,7 @@ import BuilderChoice from "@/pages/BuilderChoice";
 import Windows from "@/pages/Windows";
 import Linux from "@/pages/Linux";
 import Mac from "@/pages/Mac";
+import aboutUs from "@/pages/AboutUs";
 
 export default {
   name: 'App',
@@ -26,7 +27,9 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     BuilderChoice,
     // eslint-disable-next-line vue/no-unused-components
-    Windows,Linux,Mac
+    Windows,Linux,Mac,
+    // eslint-disable-next-line vue/no-unused-components
+    aboutUs
   },
   computed:{
     view() { return this.$store.getters.getView }

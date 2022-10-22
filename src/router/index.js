@@ -36,6 +36,10 @@ const routes = [
         name: 'Mac',
         path : '/Mac',
         component: () => import("../pages/Mac")
+    },{
+        name: 'AboutUs',
+        path : '/AboutUs',
+        component: () => import("../pages/AboutUs")
     },
 
 ];

@@ -23,10 +23,9 @@
         <div class="col">
           <h4>Navigation</h4>
           <ul class="list">
-            <li>Home</li>
-            <li>Build</li>
-            <li>About us</li>
-            <li>Contact</li>
+            <li><router-link to = '/'>Home</router-link></li>
+            <li><router-link to = '/BuilderChoice'>Build</router-link></li>
+            <li><router-link to = '/AboutUs'>AboutUS</router-link></li>
           </ul>
         </div>
       </div>
@@ -71,6 +70,11 @@ li{
   padding: 8px;
   font-size: 25px;
   list-style-type: none;
+  color: white;
+}
+
+a{
+  color: white;
 }
 
 ul{
@@ -89,7 +93,7 @@ h4{
   max-width: 1400px;
 }
 
-li:hover{
+a:hover{
   color: gold;
   transition: 0.3s;
 }

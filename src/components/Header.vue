@@ -4,8 +4,8 @@
       <ul>
         <li><router-link class = 'nav-link' to = '/'><img src="@/assets/Logo-blue.png" class="logo-header" alt="logo"/></router-link></li>
         <li><router-link class = 'nav-link' to = '/builderChoice'>Build</router-link></li>
-        <li><router-link class = 'nav-link' to = '/about'>About us</router-link></li>
-        <li><router-link class="login-text" to = '/login' @click="switchToLogin()" >Log Out</router-link></li>
+        <li><router-link class = 'nav-link' to = '/aboutUs'>About us</router-link></li>
+        <li><router-link class= "nav-link" style ="float:right;" to = '/login' @click="switchToLogin()" >Log Out</router-link></li>
       </ul>
     </nav>
     <div class="trait-footer"></div>
@@ -13,6 +13,8 @@
 
     </div>
     <router-view/>
+
+
   </div>
 </template>
 
@@ -50,7 +52,7 @@ li{
   background: #11151C;
   width: 100%;
   display: inline-block;
-  height: 120px;
+  height: 110px;
 }
 
 .logo-header {
@@ -62,23 +64,20 @@ li{
 
 .nav-link{
   text-decoration: none;
-  margin: 25px;
+  margin: 60px;
   color: #FFFFFF;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .nav-link:hover{
   color: gold;
   transition: 0.3s;
+  text-shadow: 0 0 5px #ffd700,
+  0 0 25px #ffd700,
+  0 0 50px #ffd700,
+  0 0 100px #ffd700;
 }
 
-.login-text{
-  text-decoration: underline;
-  margin: 25px;
-  color: #FFFFFF;
-  font-size: 50px;
-  float: right;
-  margin-top: 52px;
-}
+
 
 </style>
