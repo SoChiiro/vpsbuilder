@@ -4,13 +4,11 @@
       <div class="column" style="border-right: #11151C 10px;">
         <img src="../assets/thomas-pdp.jpg" class="image-about-us">
 
-        <ul>
-          <li>name : MARIOTTE</li>
-          <li>first name : Thomas</li>
-          <li>age : 22 years old</li>
-          <li>job : Thomas to lead the project. He realized the figma and all the frames. He also coded the home/build/Windows.. and about us pages. He also made the header and the footer.
-            Overall he had all the ideas for the design and for each page. Real pillar for the project he did his best to make it a success. </li>
-        </ul>
+        <p><strong>Name</strong> : MARIOTTE</p>
+          <p><strong>First name</strong>  : Thomas</p>
+          <p><strong>Age</strong>  : 22 years old</p>
+          <p><strong>Job</strong>  : Thomas to lead the project. He realized the figma and all the frames. He also coded the home/build/Windows.. and about us pages. He also made the header and the footer.
+            Overall he had all the ideas for the design and for each page. Real pillar for the project he did his best to make it a success. </p>
       </div>
 
       <div class="column">
