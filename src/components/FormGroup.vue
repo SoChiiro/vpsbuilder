@@ -16,16 +16,18 @@
         </div>
     </div>
     <div
-        v-if = "fields?.select"
+        v-if = "fields?.selects"
     >
     
         <select 
-        :name="fields.select.name" 
-        id="country_selection"
+            :name="select.name" 
+            id="country_selection"
+            v-for = "(select,index) in fields.selects"
+            :key = "index"
         >
-            <optgroup :label="fields.select.name">
+            <optgroup :label="select.name">
                 <option
-                v-for="(option,index) in fields.select.options"
+                v-for="(option,index) in select.options"
                     :key = "index"
                 >
                     {{option}}
@@ -60,7 +62,7 @@ export default {
     font-weight: bold;
     font-size: 16px;    
     align-self : center;
-    color: #07074d;
+    color: white;
     margin-bottom: 12px;
     width : 25%;
 }
