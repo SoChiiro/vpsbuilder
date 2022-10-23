@@ -3,7 +3,8 @@
     <div class="header">
       <img src="@/assets/logo.png" class="logo" alt="Logo" />
       <br>
-      <img src="@/assets/windows_logo.png" class="os-logo" alt="windows_logo" />
+      <div>
+      <img src="@/assets/windows_logo.png" class="os-logo" alt="windows_logo" /><h1>Windows</h1></div>
       <br><br>
     </div>
     <Splide :options="{ rewind: true }" aria-label="Vue Splide Example">
@@ -14,7 +15,7 @@
       >
         <div class="form-content">
           <div class="form-logo">
-            <h1>{{name}}</h1>
+            <h2>{{name}}</h2>
           </div>
           <div class="form">
             <form action="">
@@ -23,7 +24,6 @@
               />
               <div class="form-buttons">
                 <button type="submit">submit</button>
-                <button type="button">customize</button>
               </div>
             </form>
           </div>
@@ -67,9 +67,23 @@ myName;
 }
 
 
+h1{
+  margin: 40px auto;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 100px;
+  font-weight: bold;
+  color: #2596be;
+  text-align: center;
+  letter-spacing: 5px;
+  text-shadow: 2px 7px 5px rgba(0,0,0,0.3),
+  0px -4px 10px rgba(255,255,255,0.3);
+}
+
 .logo {
   width: 200px;
   height: 200px;
+  text-align: center;
+  display : flex;
 }
 
 .form-content {
@@ -92,11 +106,13 @@ myName;
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
-  background: black;
+  background: #11151C;
   color: white;
-  width: 300px;
+  width: 90%;
   height: auto;
+  box-shadow: rgba(37, 150, 190, 1) 0px 0px 0px 2px, rgba(37, 150, 190, 1) 0px 4px 6px -1px, rgba(37, 150, 190, 1) 0px 1px 0px inset;
 }
+
 
 input[type="text"], #country_selection {
   background: none;
@@ -118,25 +134,28 @@ input[type="text"]:focus {
 
 ::placeholder {
   color: white;
-  opacity: 1;
+  opacity: 0.8;
 }
 .form-buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
 }
+
 button {
-  padding: 10px;
+  padding: 14px;
   border: none;
   color: white;
   background: #364156;
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 25px;
   cursor: pointer;
+  margin : auto;
 }
 
 button:hover {
   background: dimgray;
+  color : gold;
 }
 
 Splide {

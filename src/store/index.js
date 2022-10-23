@@ -31,25 +31,25 @@ const store = createStore({
                         type: "text",
                         label: "PSEUDO",
                         placeholder: "ENTER YOUR PSEUDO",
-                    value:"",    
+                        value:"",    
                     },
                     "email":     {
                         type: "email",
                         label: "EMAIL",
                         placeholder: "ENTER YOUR EMAIL",
-                    value:"",    
+                        value:"",    
                     },    
                     "password":  {
                         type: "password",
                         label: "PASSWORD",
                         placeholder: "ENTER YOUR PASSWORD",
-                    value:"",    
+                        value:"",    
                     },    
                     "cfPassword":{
                         type: "password",
                         label: "CONFIRM PASSWORD",
                         placeholder: "CONFIRM YOUR PASSWORD",
-                    value:"",    
+                        value:"",    
                     },
                     "birthDate": {
                         type: "date",
@@ -61,487 +61,602 @@ const store = createStore({
                 },
             },
             OS:{    
-                Linux:{
-                    "LOW BUDGET":{
-                        inputs :{
-                            "CPU TYPE":{
-                                type: "text",
-                                placeholder: "CPU TYPE",
-                            value:"",
-                        },
-
-                            "RAM":   {
-                                type: "number",
-                                min: "2048",
-                                max: "4096",
-                                step: "1024",
-                                placeholder: "RAM",
-                            value:"",
-                        },
-
-                            "STORAGE":{
-                                type: "number",
-                                min: "8192",
-                                max: "200480",
-                                step: "1024",
-                                placeholder: "STORAGE",
-                            value:"",
-                        },
-
-                            "BANDWIDTH":     {
-                                type: "number",
-                                min: "2",
-                                max: "6",
-                                placeholder: "BANDWIDTH",
-                            value:"",
-                        },
-
-                        },
-                        select: {
-                            "name" : 'COUNTRY',
-                            "options" : [
-                                "France",
-                                "Allemagne",
-                                "Espagne"
-                                ]
-                            }
-                    },
-                    "MIDDLE BUDGET":{
-                        inputs :{
-                            "VM TYPE":{
-                                type: "text",
-                                placeholder: "VM TYPE",
-                            value:"",
-                        },
-
-                            "CPU FREQUENCY":{
-                                type: "number",
-                                min: "2",
-                                max: "6",
-                                placeholder: "CPU FREQUENCY",
-                            value:"",
-                        },
-
-                            "RAM":   {
-                                type: "number",
-                                min: "2048",
-                                max: "4096",
-                                step: "1024",
-                                placeholder: "RAM",
-                            value:"",
-                        },
-
-                            "STORAGE":{
-                                type: "number",
-                                min: "8192",
-                                max: "200480",
-                                step: "1024",
-                                placeholder: "STORAGE",
-                            value:"",
-                        },
-
-                            "BANDWIDTH":     {
-                                type: "number",
-                                min: "2",
-                                max: "6",
-                                placeholder: "BANDWIDTH",
-                            value:"",
-                        },
-
-                        },
-                        select: {
-                            "name" : 'COUNTRY',
-                            "options" : [
-                                "France",
-                                "Allemagne",
-                                "Espagne"
-                                ]
-                            }
-                    },
-                    "HIGH BUDGET":{
-                        inputs :{
-                        "CORE":{
-                            type: "number",
-                            min: "2",
-                            max: "6",
-                            placeholder: "CORE",
-                        value:"",
-                    },
-
-                        "CPU FREQUENCY":{
-                            type: "number",
-                            min: "2",
-                            max: "6",
-                            placeholder: "CPU FREQUENCY",
-                        value:"",
-                    },
-
-                        "RAM":   {
-                            type: "number",
-                            min: "2048",
-                            max: "4096",
-                            step: "1024",
-                            placeholder: "RAM",
-                        value:"",
-                    },
-
-                        "STORAGE":{
-                            type: "number",
-                            min: "8192",
-                            max: "200480",
-                            step: "1024",
-                            placeholder: "STORAGE",
-                        value:"",
-                    },
-
-                        "BANDWIDTH":     {
-                            type: "number",
-                            min: "2",
-                            max: "6",
-                            placeholder: "BANDWIDTH",
-                        value:"",
-                    },
-
-                            "VERSION":  {
-                                type: "number",
-                                min: "10.0",
-                                max: "10.9",
-                                step: "0.1",
-                                name: "version",
-                                id: "version",
-                                placeholder: "ENTER THE VERSION",
-                            value:"",
-                        }
-
-                        },
-                        select: {
-                            "name" : 'country',
-                            "options" : [
-                                "France",
-                                "Allemagne",
-                                "Espagne"
-                                ]
-                            }
-                        }
-                },
                 Mac:{
                     "LOW BUDGET":{
                         inputs :{
-                            "CPU TYPE":{
-                                type: "text",
-                                placeholder: "CPU TYPE",
-                            value:"",
+                            "CPU CORE":{
+                                type: "number",
+                                label:"CPU CORE",
+                                min: "1",
+                                max: '2',
+                                step: "1",
+                                placeholder: "CPU CORE",
+                                value:"1",
                         },
-
+                            
                             "RAM":   {
                                 type: "number",
-                                min: "2048",
-                                max: "4096",
-                                step: "1024",
+                                label:"RAM",
+                                min: "2",
+                                max: "4",
+                                step: "2",
                                 placeholder: "RAM",
-                            value:"",
+                                value:"2",
                         },
-
+                            
                             "STORAGE":{
                                 type: "number",
-                                min: "8192",
-                                max: "200480",
-                                step: "1024",
+                                label:"STORAGE",
+                                min: "10",
+                                max: "25",
+                                step: "5",
                                 placeholder: "STORAGE",
-                            value:"",
+                                value:"10",
                         },
-
+                            
                             "BANDWIDTH":     {
                                 type: "number",
-                                min: "2",
-                                max: "6",
+                                label:"BANDWIDTH",
+                                min: "15",
+                                max: "25",
+                                step:"5",
                                 placeholder: "BANDWIDTH",
-                            value:"",
+                                value:"15",
                         },
-
+                        
                         },
-                        select: {
+                        selects:[ 
+                            {
                             "name" : 'COUNTRY',
                             "options" : [
                                 "France",
                                 "Allemagne",
                                 "Espagne"
                                 ]
-                            }
+                            },
+                        ]
                     },
                     "MIDDLE BUDGET":{
                         inputs :{
-                            "VM TYPE":{
-                                type: "text",
-                                placeholder: "VM TYPE",
-                            value:"",
-                        },
-
-                            "CPU FREQUENCY":{
+                            "CPU CORE":{
                                 type: "number",
+                                label:"CPU CORE",
                                 min: "2",
-                                max: "6",
-                                placeholder: "CPU FREQUENCY",
-                            value:"",
+                                max: '4',
+                                step: "1",
+                                placeholder: "CPU CORE",
+                                value:"2",
                         },
-
+                            
                             "RAM":   {
                                 type: "number",
-                                min: "2048",
-                                max: "4096",
-                                step: "1024",
+                                label:"RAM",
+                                min: "4",
+                                max: "6",
+                                step: "2",
                                 placeholder: "RAM",
-                            value:"",
+                                value:"4",
                         },
-
+                            
                             "STORAGE":{
                                 type: "number",
-                                min: "8192",
-                                max: "200480",
-                                step: "1024",
+                                label:"STORAGE",
+                                min: "30",
+                                max: "60",
+                                step: "5",
                                 placeholder: "STORAGE",
-                            value:"",
+                                value:"30",
                         },
-
+                            
                             "BANDWIDTH":     {
                                 type: "number",
-                                min: "2",
-                                max: "6",
+                                label:"BANDWIDTH",
+                                min: "30",
+                                max: "40",
                                 placeholder: "BANDWIDTH",
-                            value:"",
+                                value:"30",
                         },
-
+                        
                         },
-                        select: {
+                        selects:[ 
+                            {
                             "name" : 'COUNTRY',
                             "options" : [
                                 "France",
                                 "Allemagne",
                                 "Espagne"
                                 ]
-                            }
+                            },
+                        ]
                     },
                     "HIGH BUDGET":{
                         inputs :{
-                        "CORE":{
-                            type: "number",
-                            min: "2",
-                            max: "6",
-                            placeholder: "CORE",
-                            value:""
-                        },
-                        "CPU FREQUENCY":{
-                            type: "number",
-                            min: "2",
-                            max: "6",
-                            placeholder: "CPU FREQUENCY",
-                            value:""
-                        },
-                        "RAM":   {
-                            type: "number",
-                            min: "2048",
-                            max: "4096",
-                            step: "1024",
-                            placeholder: "RAM",
-                            value:""
-                        },
-                        "STORAGE":{
-                            type: "number",
-                            min: "8192",
-                            max: "200480",
-                            step: "1024",
-                            placeholder: "STORAGE",
-                            value:""
-                        },
-                        "BANDWIDTH":     {
-                            type: "number",
-                            min: "2",
-                            max: "6",
-                            placeholder: "BANDWIDTH",
-                            value:""
-                        },
-                            "VERSION":  {
+                                "CPU CORE":{
+                                    type: "number",
+                                    label:"CPU CORE",
+                                    min: "4",
+                                    max: '6',
+                                    step: "1",
+                                    placeholder: "CPU CORE",
+                                    value:"4",
+                            },
+                                
+                                "RAM":   {
+                                    type: "number",
+                                    label:"RAM",
+                                    min: "6",
+                                    max: "12",
+                                    step: "2",
+                                    placeholder: "RAM",
+                                    value:"6",
+                            },
+                                
+                                "STORAGE":{
+                                    type: "number",
+                                    label:"STORAGE",
+                                    min: "70",
+                                    max: "100",
+                                    step: "5",
+                                    placeholder: "STORAGE",
+                                    value:"70",
+                            },
+                                
+                                "BANDWIDTH":     {
+                                    type: "number",
+                                    label:"BANDWIDTH",
+                                    min: "60",
+                                    max: "100",
+                                    placeholder: "BANDWIDTH",
+                                    value:"60",
+                            },
+                            
+                            },
+                            selects:[ 
+                                {
+                                "name" : 'COUNTRY',
+                                "options" : [
+                                    "France",
+                                    "Allemagne",
+                                    "Espagne"
+                                    ]
+                                },
+                            ]
+                        }
+                },
+                Linux:{
+                    "LOW BUDGET":{
+                        inputs :{
+                            "CPU CORE":{
                                 type: "number",
-                                min: "10.0",
-                                max: "10.9",
-                                step: "0.1",
-                                name: "version",
-                                id: "version",
-                                placeholder: "ENTER THE VERSION",
-                                value:""
-                            }
+                                label:"CPU CORE",
+                                min: "2",
+                                max: "4",
+                                placeholder: "CPU CORE",
+                                value:"2",
                         },
-                        select: {
+                            
+                            "CPU FREQUENCY":{
+                                type: "number",
+                                label:"CPU FREQUENCY",
+                                min: "2.5",
+                                max: "3",
+                                step: "0.1",
+                                placeholder: "CPU FREQUENCY",
+                                value:"2.5",
+                        },
+                            
+                            "RAM":   {
+                                type: "number",
+                                label:"RAM",
+                                min: "4",
+                                max: "6",
+                                step:"2",
+                                placeholder: "RAM",
+                                value:"4",
+                        },
+                            
+                            "STORAGE":{
+                                type: "number",
+                                label:"STORAGE",
+                                min: "15",
+                                max: "30",
+                                step: "5",
+                                placeholder: "STORAGE",
+                                value:"15",
+                        },
+                            
+                            "BANDWIDTH":     {
+                                type: "number",
+                                label:"BANDWIDTH",
+                                min: "20",
+                                max: "30",
+                                placeholder: "BANDWIDTH",
+                                value:"20",
+                        },
+                        
+                        },
+                        selects:[ 
+                            {
+                            "name" : 'COUNTRY',
+                            "options" : [
+                                "France",
+                                "Allemagne",
+                                "Espagne"
+                                ]
+                            },
+                            {
+                                "name" : "VM TYPE",
+                                "options" : [
+                                    "Debian",
+                                    "Solaris",
+                                    "Kali"
+                                ]
+                            }
+                        ]
+                    },
+                    "MIDDLE BUDGET":{
+                        inputs :{
+                            "CPU CORE":{
+                                type: "number",
+                                label:"CPU CORE",
+                                placeholder: "CPU CORE",
+                                min:"2",
+                                max:"4",
+                                value:"2",
+                        },
+                            
+                            "CPU FREQUENCY":{
+                                type: "number",
+                                label:"CPU FREQUENCY",
+                                min: "2.5",
+                                max: "3",
+                                placeholder: "CPU FREQUENCY",
+                                value:"2.5",
+                        },
+                            
+                            "RAM":   {
+                                type: "number",
+                                label:"RAM",
+                                min: "4",
+                                max: "6",
+                                step:"2",
+                                placeholder: "RAM",
+                                value:"4",
+                        },
+                            
+                            "STORAGE":{
+                                type: "number",
+                                label:"STORAGE",
+                                min: "40",
+                                max: "70",
+                                step:"5",
+                                placeholder: "STORAGE",
+                                value:"40",
+                        },
+                            
+                            "BANDWIDTH":     {
+                                type: "number",
+                                label:"BANDWIDTH",
+                                min: "40",
+                                max: "50",
+                                step:"0.1",
+                                placeholder: "BANDWIDTH",
+                                value:"40",
+                        },
+                        
+                        },
+                        selects:[ 
+                            {
+                            "name" : 'COUNTRY',
+                            "options" : [
+                                "France",
+                                "Allemagne",
+                                "Espagne"
+                                ]
+                            },
+                            {
+                                "name" : "VM TYPE",
+                                "options" : [
+                                    "Debian",
+                                    "Solaris",
+                                    "Kali"
+                                ]
+                            }
+                        ]
+                    },
+                    "HIGH BUDGET":{
+                        inputs :{
+                            "CPU CORE":{
+                                type: "number",
+                                label:"CPU CORE",
+                                min:"4",
+                                max:"6",
+                                placeholder: "CPU CORE",
+                                value:"4",
+                        },
+                            
+                            "CPU FREQUENCY":{
+                                type: "number",
+                                label:"CPU FREQUENCY",
+                                min: "3.5",
+                                max: "4.2",
+                                placeholder: "CPU FREQUENCY",
+                                value:"3.5",
+                        },
+                            
+                            "RAM":   {
+                                type: "number",
+                                label:"RAM",
+                                min: "6",
+                                max: "12",
+                                step: "2",
+                                placeholder: "RAM",
+                                value:"6",
+                        },
+                            
+                            "STORAGE":{
+                                type: "number",
+                                label:"STORAGE",
+                                min: "70",
+                                max: "100",
+                                step: "5",
+                                placeholder: "STORAGE",
+                                value:"70",
+                        },
+                            
+                            "BANDWIDTH":     {
+                                type: "number",
+                                label:"BANDWIDTH",
+                                min: "60",
+                                max: "100",
+                                step:"0.1",
+                                placeholder: "BANDWIDTH",
+                                value:"60",
+                        },
+
+                        },
+                        selects:[ 
+                            {
                             "name" : 'country',
                             "options" : [
                                 "France",
                                 "Allemagne",
                                 "Espagne"
                                 ]
+                            },
+                            {
+                                "name" : "VM TYPE",
+                                "options" : [
+                                    "Debian",
+                                    "Solaris",
+                                    "Kali"
+                                ]
                             }
+                        ]
                         }
                 },
                 Windows:{
                     "LOW BUDGET":{
                         inputs :{
-                            "CPU TYPE":{
-                                type: "text",
-                                placeholder: "CPU TYPE",
-                            value:"",
+                            "CPU CORE":{
+                                type: "number",
+                                label:"CPU CORE",
+                                min: "1",
+                                max: "2",
+                                placeholder: "CPU CORE",
+                                value:"1",
                         },
-
+    
+                            "CPU FREQUENCY":{
+                                type: "number",
+                                label:"CPU FREQUENCY",
+                                min: "2.5",
+                                max: "3.2",
+                                step:'0.1',
+                                placeholder: "CPU FREQUENCY",
+                                value:"2.5",
+                        },
+    
                             "RAM":   {
                                 type: "number",
-                                min: "2048",
-                                max: "4096",
-                                step: "1024",
+                                label:"RAM",
+                                min: "2",
+                                max: "4",
+                                step: "2",
                                 placeholder: "RAM",
-                            value:"",
+                                value:"2",
                         },
-
+    
                             "STORAGE":{
                                 type: "number",
-                                min: "8192",
-                                max: "200480",
-                                step: "1024",
+                                label:"STORAGE",
+                                min: "25",
+                                max: "50",
+                                step: "5",
                                 placeholder: "STORAGE",
-                            value:"",
+                                value:"25",
                         },
-
+    
                             "BANDWIDTH":     {
                                 type: "number",
-                                min: "2",
-                                max: "6",
+                                label:"BANDWIDTH",
+                                min: "20",
+                                max: "30",
                                 placeholder: "BANDWIDTH",
-                            value:"",
+                                value:"20",
                         },
-
-                        },
-                        select: {
+    
+                                "VERSION":  {
+                                    type: "number",
+                                    label:"VERSION",
+                                    min: "10.0",
+                                    max: "10.9",
+                                    step: "0.1",
+                                    name: "version",
+                                    id: "version",
+                                    placeholder: "ENTER THE VERSION OF WINDOWS",
+                                    value:"10.0",
+                            }
+    
+                            },
+                        selects:[ 
+                            {
                             "name" : 'COUNTRY',
                             "options" : [
                                 "France",
                                 "Allemagne",
                                 "Espagne"
                                 ]
-                            }
+                            },
+                        ]
                     },
                     "MIDDLE BUDGET":{
                         inputs :{
-                            "VM TYPE":{
-                                type: "text",
-                                placeholder: "VM TYPE",
-                            value:"",
+                            "CPU CORE":{
+                                type: "number",
+                                label:"CPU CORE",
+                                min: "2",
+                                max: "4",
+                                placeholder: "CPU CORE",
+                                value:"2",
                         },
-
+    
                             "CPU FREQUENCY":{
                                 type: "number",
-                                min: "2",
-                                max: "6",
+                                label:"CPU FREQUENCY",
+                                min: "2.8",
+                                max: "3.5",
+                                step:"0.1",
                                 placeholder: "CPU FREQUENCY",
-                            value:"",
+                                value:"2.8",
                         },
-
+    
                             "RAM":   {
                                 type: "number",
-                                min: "2048",
-                                max: "4096",
-                                step: "1024",
+                                label:"RAM",
+                                min: "6",
+                                max: "8",
+                                step: "2",
                                 placeholder: "RAM",
-                            value:"",
+                                value:"6",
                         },
-
+    
                             "STORAGE":{
                                 type: "number",
-                                min: "8192",
-                                max: "200480",
-                                step: "1024",
+                                label:"STORAGE",
+                                min: "50",
+                                max: "75",
+                                step: "5",
                                 placeholder: "STORAGE",
-                            value:"",
+                                value:"50",
                         },
-
+    
                             "BANDWIDTH":     {
                                 type: "number",
-                                min: "2",
-                                max: "6",
+                                label:"BANDWIDTH",
+                                min: "30",
+                                max: "50",
                                 placeholder: "BANDWIDTH",
-                            value:"",
+                                value:"30",
                         },
-
-                        },
-                        select: {
+    
+                                "VERSION":  {
+                                    type: "number",
+                                    label:"VERSION",
+                                    min: "10.0",
+                                    max: "10.9",
+                                    step: "0.1",
+                                    name: "version",
+                                    id: "version",
+                                    placeholder: "ENTER THE VERSION",
+                                    value:"10.0",
+                            }
+    
+                            },
+                        selects:[ 
+                            {
                             "name" : 'COUNTRY',
                             "options" : [
                                 "France",
                                 "Allemagne",
                                 "Espagne"
                                 ]
-                            }
+                            },
+                        ]
                     },
                     "HIGH BUDGET":{
                         inputs :{
-                        "CORE":{
+                        "CPU CORE":{
                             type: "number",
-                            min: "2",
-                            max: "6",
-                            placeholder: "CORE",
-                        value:"",
+                            label:"CPU CORE",
+                            min: "5",
+                            max: "8",
+                            placeholder: "Choose the number of core",
+                            value:"5",
                     },
 
                         "CPU FREQUENCY":{
                             type: "number",
-                            min: "2",
-                            max: "6",
+                            label:"CPU FREQUENCY",
+                            min: "3.5",
+                            max: "4.2",
+                            step: "0.1",
                             placeholder: "CPU FREQUENCY",
-                        value:"",
+                            value:"3.5",
                     },
 
                         "RAM":   {
                             type: "number",
-                            min: "2048",
-                            max: "4096",
-                            step: "1024",
+                            label:"RAM",
+                            min: "8",
+                            max: "16",
+                            step: "2",
                             placeholder: "RAM",
-                        value:"",
+                            value:"8",
                     },
 
                         "STORAGE":{
                             type: "number",
-                            min: "8192",
-                            max: "200480",
-                            step: "1024",
+                            label:"STORAGE",
+                            min: "100",
+                            max: "150",
+                            step: "5",
                             placeholder: "STORAGE",
-                        value:"",
+                            value:"100",
                     },
 
                         "BANDWIDTH":     {
                             type: "number",
-                            min: "2",
-                            max: "6",
+                            label:"BANDWIDTH",
+                            min: "50",
+                            max: "100",
                             placeholder: "BANDWIDTH",
-                        value:"",
+                            value:"50",
                     },
 
                             "VERSION":  {
                                 type: "number",
+                                label:"VERSION",
                                 min: "10.0",
                                 max: "10.9",
                                 step: "0.1",
                                 name: "version",
                                 id: "version",
                                 placeholder: "ENTER THE VERSION",
-                            value:"",
+                                value:"10.0",
                         }
 
                         },
-                        select: {
+                        selects:[ 
+                            {
                             "name" : 'country',
                             "options" : [
                                 "France",
                                 "Allemagne",
                                 "Espagne"
                                 ]
-                            }
+                            },
+                        ]
                         }
                 }
             },  
