@@ -10,11 +10,11 @@
     </nav>
     <div class="trait-footer"></div>
     <div class="container">
-
+    
     </div>
     <router-view/>
-
-
+  
+  
   </div>
 </template>
 

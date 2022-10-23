@@ -1,7 +1,7 @@
 <template>
-    <div v-for="(value, name) in fields" :key="value.id">
+    <div v-for="(value, name) in fields.inputs" :key="value.id">
         <div class="formbold-mb-5">
-            <label :for="id" class="formbold-form-label"> {{value.label}} </label>
+            <label :for="value.id" class="formbold-form-label"> {{value.label}} </label>
             <input
                 :type="value.type"
                 :min= "value.min"
@@ -15,6 +15,25 @@
             />
         </div>
     </div>
+    <div
+        v-if = "fields?.select"
+    >
+    
+        <select 
+        :name="fields.select.name" 
+        id="country_selection"
+        >
+            <optgroup :label="fields.select.name">
+                <option
+                v-for="(option,index) in fields.select.options"
+                    :key = "index"
+                >
+                    {{option}}
+                </option>
+            </optgroup>
+        </select>
+    
+    </div>
 </template>
 
 <script>
@@ -22,8 +41,9 @@
 export default {
   name: 'FormGroup',
   props: {
-    fields : Object
-    }
+    fields : Object,
+    
+    },
 }
 
 </script>
@@ -56,5 +76,20 @@ export default {
     color: #6b7280;
     outline: none;
     resize: none;
+}
+
+#country_selection {
+  background: none;
+  border: none;
+  color: white;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 14px;
+  text-transform: uppercase;
+  width: 100%
+}
+
+#country_selection {
+  padding: 0 !important;
 }
 </style>
