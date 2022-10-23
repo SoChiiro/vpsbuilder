@@ -51,6 +51,11 @@ export default {
     }
   }
 }
+
+localStorage.setItem('name','Chris');
+var myName = localStorage.getItem('name');
+myName;
+
 </script>
 
 <style scoped>
