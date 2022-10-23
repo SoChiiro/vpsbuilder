@@ -7,15 +7,14 @@
             <div class="container title">
               <p>WELCOME BACK !</p>
             </div>
-            <div v-for="field in fields" :key="field.id">
               <FormGroup
-                :type= "field.type"
-                :label= "field.label"
-                :placeholder= "field.placeholder"
+                :fields="loginFields"
                 />
-            </div>
             <div class="container">
-              <router-link to="/home" class="button-28" @click="switchToHome()">Login</router-link>
+              <input type="button" class="button-28" @click="logIn()" value= "Login"/>
+            </div>
+            <div v-if="error" class="container title">
+              <p class="error">Pseudo and / or password incorrect</p>
             </div>
           </fieldset>
           Did not yet register ? <router-link to="/register" @click = "switchToRegister()" class = "link">Create an account !</router-link >
@@ -26,27 +25,41 @@
   
   <script>
   import FormGroup from '@/components/FormGroup.vue';
-  import LoginFields from '@/datas/LoginFields.js'
+import { router } from '@/router';
   
   export default {
       // eslint-disable-next-line vue/multi-word-component-names
       name: "Login",
       data: () => {
         return {
-          fields: LoginFields,
+          error : false
         }
       },
       components: { FormGroup },
       methods:{
         switchToRegister() {this.$store.commit('setView','register')},
-        switchToHome() {this.$store.commit('setView','home')}
+        switchToHome() {this.$store.commit('setView','home')},
+        logIn(){
+          if(this.loginFields.pseudo.value === "ZERO" && this.loginFields.password.value === "ZER@"){
+            this.switchToHome()
+            router.push("/home")
+          }else{
+            this.error = true
+          }
+        }
       },
+      computed:{
+        loginFields(){return this.$store.getters.getDatas.loginFields}
+      }
   }
   
   </script>
   
   <style scoped>
-  
+  .error{
+    color : red;
+    font: 20px italic;
+  }  
   .container{
     display: flex;
     justify-content: center;

@@ -1,32 +1,30 @@
 import { createRouter,createWebHistory } from "vue-router";
-import BuilderPage from '@/pages/BuilderPage.vue';
-import Login from '@/pages/LoginPage.vue'
 
 const routes = [
     {
         name: 'Home',
         path : '/',
-        component: () => import("../pages/HomePage")
+        component: () => import("@/pages/HomePage")
     },    {
         name: 'Builder',
         path : '/buildVPS',
-        component: BuilderPage
+        // component: () => import("@/pages/BuilderPage")
     },    {
         name: 'Login',
         path : '/login',
-        component: Login
+        component: () => import("@/pages/LoginPage")
     },    {
         name: 'Register',
         path : '/register',
-        component: () => import("../pages/RegisterPage")
+        component: () => import("@/pages/RegisterPage")
     },{
         name: 'BuilderChoice',
         path : '/BuilderChoice',
-        component: () => import("../pages/BuilderChoice")
+        component: () => import("@/pages/BuilderChoice")
     },{
         name: 'Windows',
         path : '/Windows',
-        component: () => import("../pages/Windows")
+        component: () => import("@/pages/Windows")
     },
 
 ];

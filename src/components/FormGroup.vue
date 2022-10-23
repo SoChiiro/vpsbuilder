@@ -1,18 +1,19 @@
 <template>
-    <div class="formbold-mb-5">
-        <label :for="id" class="formbold-form-label"> {{label}} </label>
-        <input
-            :type="type"
-            :min= "min"
-            :max= "max"
-            :step="step"
-            :name="name"
-            :id="id"
-            :placeholder="placeholder"
-            :click="clickHandler"
-            @click="clickHandler"
-            class="formbold-form-input"
-        />
+    <div v-for="(value, name) in fields" :key="value.id">
+        <div class="formbold-mb-5">
+            <label :for="id" class="formbold-form-label"> {{value.label}} </label>
+            <input
+                :type="value.type"
+                :min= "value.min"
+                :max= "value.max"
+                :step="value.step"
+                :name="name"
+                :id="name"
+                :placeholder="value.placeholder"
+                v-model="value.value"
+                class="formbold-form-input"
+            />
+        </div>
     </div>
 </template>
 
@@ -21,15 +22,7 @@
 export default {
   name: 'FormGroup',
   props: {
-        type: String,
-        label: String,
-        min: String,
-        max: String,
-        step: String,
-        name: String,
-        id: String,
-        placeholder: String,
-        clickHandler: Function
+    fields : Object
     }
 }
 

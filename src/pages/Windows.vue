@@ -4,16 +4,7 @@
       <form action="" method="POST">
         <fieldset>
           <div v-for="field in fields" :key="field.id">
-            <FormGroup
-                :type= "field.type"
-                :label= "field.label"
-                :min= "field.min"
-                :max = "field.max"
-                :step= "field.step"
-                :name= "field.name"
-                :id= "field.id"
-                :placeholder= "field.placeholder"
-            />
+
           </div>
           <br>
         </fieldset>
@@ -22,18 +13,18 @@
 </template>
 
 <script>
-import BuildFields from "@/datas/BuildFields";
-import FormGroup from "@/components/FormGroup";
+// import BuildFields from "@/datas/BuildFields";
+// import FormGroup from "@/components/FormGroup";
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Windows",
   data: () => {
     return {
-      fields: BuildFields,
+      // fields: BuildFields,
     }
   },
-  components: { FormGroup }
+  // components: { FormGroup }
 }
 </script>
 

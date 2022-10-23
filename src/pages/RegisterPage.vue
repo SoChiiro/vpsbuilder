@@ -1,59 +1,48 @@
 <template>
-    <div class="formbold-main-wrapper">
-            <div class="container">
+  <div class="formbold-main-wrapper">
+    
+    <div class="formbold-form-wrapper">
+      <form action="" method="POST">
+        <fieldset>
+          <div class="container">
+            <p class="title">SIGN IN</p>
+          </div>
+            <FormGroup
+              :fields="registerFields"
+              />
+          <div class="container">
+            <router-link to="/login" class="button-28" @click="switchToLogin()">REGISTER</router-link>
+            <button class="button-28" type="reset">RESET</button>
+          </div>
+        </fieldset>
+        Already have an account ? <router-link to="/login" @click = "switchToLogin()" class = "link">Log in !</router-link >
+      </form>
+    </div>
+  </div>
+</template>
 
-                <p><input type="text" placeholder="email" v-model="email"/> </p>
-                <p><input type="password" placeholder="password" v-model="password"/> </p>
-                <p><button class="button-28" @click="register">Register</button></p>
-                <p><button class="button-28" @click="signInWithGoogle">Register with Google</button></p>
+<script>
+import FormGroup from '@/components/FormGroup.vue';
 
-            </div>
-          Already have an account ? <router-link to="/login" @click = "switchToLogin()" class = "link">Log in !</router-link >
-      </div>
-  </template>
+export default {
+    // eslint-disable-next-line vue/multi-word-component-names
+    name: "Login",
+    data: () => {
+      return {
+      }
+    },
+    components: { FormGroup },
+    methods:{
+      switchToRegister() {this.$store.commit('setView','register')},
+      switchToHome() {this.$store.commit('setView','home')},
+      switchToLogin() {this.$store.commit('setView','login')}
+    },
+    computed:{
+      registerFields(){return this.$store.getters.getDatas.registerFields}
+    }
+}
 
-
-  <script setup>
-    import {ref} from "vue";
-    import {
-      getAuth,
-      createUserWithEmailAndPassword,
-      GoogleAuthProvider,
-      signInWithPopup,
-    } from "firebase/auth";
-    import { useRouter} from 'vue-router' // import router
-    const email = ref("");
-    const password = ref("")
-    const router = useRouter()
-
-    const register = () => {
-      // need .value because ref()
-      createUserWithEmailAndPassword(getAuth(), email.value, password.value)
-          // eslint-disable-next-line no-unused-vars
-          .then((data) => {
-            console.log("Successfully Registered !");
-            router.push('/buildVPS') // redirected to the Home
-          })
-          .catch((error) => {
-            console.log(error.code);
-            alert(error.code);
-          })
-
-    };
-
-    const signInWithGoogle = () => {
-      const provider = new GoogleAuthProvider();
-      signInWithPopup(getAuth(), provider)
-          .then((result) => {
-              console.log(result.user);
-              router.push("/buildVPS");
-          })
-          .catch((error) => {
-            console.log(error.code);
-          })
-    };
-
-  </script>
+</script>
   <style scoped>
   body {
     font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
@@ -171,6 +160,10 @@
     color: #6b7280;
     outline: none;
     resize: none;
+}
+.title{
+  font-size: 40px;
+  font-weight: bold;
 }
   </style>
 

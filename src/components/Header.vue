@@ -4,7 +4,7 @@
       <ul>
         <li><router-link class = 'nav-link' to = '/'><img src="@/assets/Logo-blue.png" class="logo-header" alt="logo"/></router-link></li>
         <li><router-link class = 'nav-link' to = '/builderChoice'>Build</router-link></li>
-        <li><router-link class = 'nav-link' to = '/about'>About us</router-link></li>
+        <!-- <li><router-link class = 'nav-link' to = '/about'>About us</router-link></li> -->
         <li><router-link class="login-text" to = '/login' @click="switchToLogin()" >Log Out</router-link></li>
       </ul>
     </nav>
