@@ -26,6 +26,19 @@ const routes = [
         path : '/Windows',
         component: () => import("@/pages/Windows")
     },
+    {
+        name: 'Linux',
+        path : '/Linux',
+        component: () => import("../pages/Linux")
+    },{
+        name: 'Mac',
+        path : '/Mac',
+        component: () => import("../pages/Mac")
+    },{
+        name: 'AboutUs',
+        path : '/AboutUs',
+        component: () => import("../pages/AboutUs")
+    },
 
 ];
 

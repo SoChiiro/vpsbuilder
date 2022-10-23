@@ -9,16 +9,17 @@
     <router-link to = '/Windows' ><div class="ui raised padded container segment" >
       <p>WINDOWS</p>
       <img src="@/assets/windows_logo.png" class="logo-windows" alt="logo_windows"/>
-    </div></router-link>
+    </div></router-link><br><br>
 
-    <div class="ui raised padded container segment">
+    <router-link to = '/Linux' ><div class="ui raised padded container segment" >
       <p>LINUX</p>
       <img src="@/assets/linux_logo.png" class="logo-windows" alt="logo_windows"/>
-    </div>
-    <div class="ui raised padded container segment">
+    </div></router-link><br><br>
+
+    <router-link to = '/Mac' ><div class="ui raised padded container segment" >
       <p>MAC OS</p>
       <img src="@/assets/mac_logo.png" class="logo-windows" alt="logo_windows"/>
-    </div>
+    </div></router-link><br><br>
   </div>
   <br>
 
@@ -73,5 +74,6 @@ h1{
 .os-container{
   margin: 2%;
 }
+
 
 </style>
