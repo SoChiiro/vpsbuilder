@@ -22,7 +22,7 @@
              <FormGroup
               :fields="budget"
               />
-              <p class="price" >{{price}}</p>
+              <p class="cost" >{{cost(budget.inputs)}} €/month</p>
               <div class="form-buttons">
                 <button type="submit">submit</button>
               </div>
@@ -30,7 +30,7 @@
           </div>
         </div>
       </SplideSlide>
-
+    
     </Splide>
     <br>
     <br>
@@ -46,11 +46,19 @@ export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: 'Windows',
   components: { Splide, SplideSlide, FormGroup },
-  computed:{
-    macFields(){
-      return this.$store.getters.getDatas.OS.Mac;
-    }
+  methods:{
+    cost(inputs){ 
+                const cost = inputs['CPU CORE'].value*this.price.CORE
+                      +inputs['RAM'].value*this.price.RAM
+                      +inputs['STORAGE'].value*this.price.STORAGE
+                      +inputs['BANDWIDTH'].value*this.price.BAND
+                return Math.round(cost * 100)/100
+    },
   },
+  computed:{
+    macFields(){ return this.$store.getters.getDatas.OS.Mac},
+    price(){ return this.$store.getters.getDatas.PRICE },
+        },
 }
 
 
@@ -159,9 +167,11 @@ Splide {
   display: block;
 }
 
-.price{
+.cost{
+  color: aqua;
   text-align : center;
-  font-size: 15px;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 SplideSlide{

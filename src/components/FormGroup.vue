@@ -1,7 +1,7 @@
 <template>
     <div v-for="(value, name) in fields.inputs" :key="value.id">
         <div class="formbold-mb-5">
-            <label :for="value.id" class="formbold-form-label"> {{value.label}} </label>
+            <label :for="name" class="formbold-form-label"> {{value.label}} </label>
             <input
                 :type="value.type"
                 :min= "value.min"
@@ -78,6 +78,11 @@ export default {
     color: #6b7280;
     outline: none;
     resize: none;
+}
+
+.price{
+  text-align : center;
+  font-size: 15px;
 }
 
 #country_selection {

@@ -22,6 +22,7 @@
              <FormGroup
               :fields="budget"
               />
+              <p class="cost" >{{cost(budget.inputs)}} €/month</p>
               <div class="form-buttons">
                 <button type="submit">submit</button>
               </div>
@@ -45,10 +46,19 @@ export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: 'Linux',
   components: { Splide, SplideSlide, FormGroup },
+  methods:{
+    cost(inputs){ 
+                const cost = inputs['CPU CORE'].value*this.price.CORE
+                      +inputs['CPU FREQUENCY'].value*this.price.FREQ
+                      +inputs['RAM'].value*this.price.RAM
+                      +inputs['STORAGE'].value*this.price.STORAGE
+                      +inputs['BANDWIDTH'].value*this.price.BAND
+                return Math.round(cost * 100)/100
+    },
   computed:{
-    linuxFields(){
-      return this.$store.getters.getDatas.OS.Linux;
-    }
+    linuxFields(){ return this.$store.getters.getDatas.OS.Linux },
+    price(){ return this.$store.getters.getDatas.PRICE },
+    },
   }
 }
 </script>
@@ -150,6 +160,12 @@ button {
 
 button:hover {
   background: dimgray;
+}
+.cost{
+  color: aqua;
+  text-align : center;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 Splide {

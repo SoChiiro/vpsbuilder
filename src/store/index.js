@@ -8,6 +8,15 @@ const store = createStore({
         },
         view : 'home',
         datas : {
+            "PRICE": {
+                CPU : 0.99,
+                STORAGE : 0.05,
+                FREQ : 0.3,
+                RAM : 0.4,
+                BAND : 0.1,
+                CORE : 0.2,
+                VERSION: 0.7,
+            },
             loginFields: { 
                 inputs : {
                     
@@ -477,26 +486,17 @@ const store = createStore({
                                 value:"25",
                         },
     
-                            "BANDWIDTH":     {
+                            "VERSION":  {
                                 type: "number",
-                                label:"BANDWIDTH",
-                                min: "20",
-                                max: "30",
-                                placeholder: "BANDWIDTH",
-                                value:"20",
-                        },
-    
-                                "VERSION":  {
-                                    type: "number",
-                                    label:"VERSION",
-                                    min: "10.0",
-                                    max: "10.9",
-                                    step: "0.1",
-                                    name: "version",
-                                    id: "version",
-                                    placeholder: "ENTER THE VERSION OF WINDOWS",
-                                    value:"10.0",
-                            }
+                                label:"VERSION",
+                                min: "1.0",
+                                max: "10.9",
+                                step: "0.1",
+                                name: "version",
+                                id: "version",
+                                placeholder: "ENTER THE VERSION",
+                                value:"1.0",
+                        }
     
                             },
                         selects:[ 
@@ -563,13 +563,13 @@ const store = createStore({
                                 "VERSION":  {
                                     type: "number",
                                     label:"VERSION",
-                                    min: "10.0",
+                                    min: "1.0",
                                     max: "10.9",
                                     step: "0.1",
                                     name: "version",
                                     id: "version",
                                     placeholder: "ENTER THE VERSION",
-                                    value:"10.0",
+                                    value:"1.0",
                             }
     
                             },
@@ -637,13 +637,13 @@ const store = createStore({
                             "VERSION":  {
                                 type: "number",
                                 label:"VERSION",
-                                min: "10.0",
+                                min: "1.0",
                                 max: "10.9",
                                 step: "0.1",
                                 name: "version",
                                 id: "version",
                                 placeholder: "ENTER THE VERSION",
-                                value:"10.0",
+                                value:"1.0",
                         }
 
                         },

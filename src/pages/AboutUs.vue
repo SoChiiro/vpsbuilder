@@ -12,8 +12,11 @@
       </div>
 
       <div class="column">
-        <img src="../assets/thomas-pdp.jpg" class="image-about-us">
-        <p>blablabla</p>
+        <img src="../assets/briyan.png" class="image-about-us">
+        <p><strong>Name</strong> : </p>
+          <p><strong>First name</strong>  : </p>
+          <p><strong>Age</strong>  :  years old</p>
+          <p><strong>Job</strong>  :  </p>
       </div>
 
       <div class="ui two column doubling stackable grid container segment">
