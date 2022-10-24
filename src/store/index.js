@@ -20,7 +20,6 @@ const store = createStore({
             },
             loginFields: { 
                 inputs : {
-                    
                     "pseudo":{
                         type: "text",
                         label: "PSEUDO",
@@ -496,7 +495,7 @@ const store = createStore({
                                 name: "version",
                                 id: "version",
                                 placeholder: "ENTER THE VERSION",
-                                value:"1.0",
+                                value:"10.0",
                         }
     
                             },
@@ -570,7 +569,7 @@ const store = createStore({
                                     name: "version",
                                     id: "version",
                                     placeholder: "ENTER THE VERSION",
-                                    value:"1.0",
+                                    value:"10.0",
                             }
     
                             },
@@ -644,7 +643,7 @@ const store = createStore({
                                 name: "version",
                                 id: "version",
                                 placeholder: "ENTER THE VERSION",
-                                value:"1.0",
+                                value:"10.0",
                         }
 
                         },
@@ -663,14 +662,13 @@ const store = createStore({
             },  
             savedVPS : []
         },
-    }
-    ,
+    },
+
     actions: {
         async POPULATE_FROM_CACHE({ state }) {
             let [keyss, values] = await Promise.all([keys(), getAll()])
             state.translations = keyss.map((key, index) => ({ id: key, name: values[index] }))
         }
-
     },
     getters: {
         getView(state) {
@@ -692,6 +690,5 @@ const store = createStore({
         }
     },
 });
-
 
 export default store;

@@ -61,8 +61,10 @@ export default {
       this.$store.commit('saveFormW');
     },
     submitForm(inputs){
-      this.$store.commit('addVPS',inputs);
-      console.log(this.$store.getters.getDatas.savedVPS)
+      let copyInputs = { ...inputs }
+      copyInputs['OS'] = { "value" : "Window" };
+      console.log(copyInputs)
+      this.$store.commit('addVPS',copyInputs);
     },
     },
   computed:{

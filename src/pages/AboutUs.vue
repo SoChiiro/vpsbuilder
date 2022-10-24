@@ -1,4 +1,5 @@
 <template>
+
   <div class="AboutUs-container">
     <div class="ui two column doubling stackable grid container segment">
       <div class="column" style="border-right: #11151C 10px;">
@@ -7,7 +8,7 @@
         <p><strong>Name</strong> : MARIOTTE</p>
           <p><strong>First name</strong>  : Thomas</p>
           <p><strong>Age</strong>  : 22 years old</p>
-          <p><strong>Job</strong>  : Thomas to lead the project. He realized the figma and all the frames. He also coded the home/build/Windows.. and about us pages. He also made the header and the footer.
+          <p><strong>Job</strong>  : Thomas carry out the project. He realized the figma and all the frames. He also coded the home/build/Windows.. and about us pages. He also made the header and the footer.
             Overall he had all the ideas for the design and for each page. Real pillar for the project he did his best to make it a success. </p>
       </div>
 
@@ -16,26 +17,25 @@
         <p><strong>Last Name</strong> : KOUAM FOZEU</p>
           <p><strong>First name</strong>  : BRIYAN KESSEL</p>
           <p><strong>Age</strong>  : 19 years old</p>
-          <p><strong>Job</strong>  : </p>
+          <p><strong>Job</strong>  : Briyan made the "Store" as well as the assigned functions. He also helped to create the carousel and the "MY VPS" page. He also suggested ideas on the design and helped in its realisation.</p>
       </div>
 
       <div class="ui two column doubling stackable grid container segment">
         <div class="column">
           <img src="../assets/p-i.png" class="image-about-us">
-          <p>Nelson Fossi </p>
+          <p>Nelson FOSSI </p>
           <p>?</p>
         </div>
 
         <div class="column">
           <img src="../assets/p-i.png" class="image-about-us">
-          <p>Clément</p>
+          <p>Clément VANDAME</p>
           <p>?</p>
         </div>
       </div>
-
     </div>
-
   </div>
+
 </template>
 
 <script>
@@ -66,6 +66,7 @@ li{
   margin-left: 2%;
   list-style-image: none !important;
 }
+
 li::marker{
   list-style-image: none !important;
 }

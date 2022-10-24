@@ -3,12 +3,13 @@
     <div class="header">
       <img src="@/assets/logo.png" class="logo" alt="Logo" />
       <br>
+
       <div>
       <img src="@/assets/linux_logo.png" class="os-logo" alt="linux_logo" /><h1>LINUX</h1></div>
       <br><br>
     </div>
+
     <Splide :options="{ rewind: true }" aria-label="Vue Splide Example">
-      
       <SplideSlide
         v-for="(budget,name) in linuxFields"
         :key = "name"
@@ -30,10 +31,9 @@
           </div>
         </div>
       </SplideSlide>
-      
     </Splide>
-    <br>
-    <br>
+
+    <br><br>
   </div>
 </template>
 

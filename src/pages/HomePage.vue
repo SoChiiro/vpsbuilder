@@ -1,6 +1,6 @@
 <template>
-  <div class="HomePage-container">
 
+  <div class="HomePage-container">
       <video class="video_nuage" autoplay loop>
         <source src="../assets/nuage.mp4" type=video/mp4 >
       </video>
@@ -13,26 +13,24 @@
         Virtual private servers can be purchased as a standalone service or can be included as part of a cloud hosting package.
         Cloud hosting packages can offer a number of advantages, including lower pricing and the ability to scale up or down as needed.
         Virtual private servers are perfect for businesses that need a high level of security and privacy for their websites and applications.</p>
-
       <br>
 
       <h1 class="title-homepage">Why a VPS Builder ? </h1>
-
       <p class="text-hp"> There are a lot of reasons why virtual private server (VPS) hosting is considered the best type of hosting for your website.
         Here are five of the most important reasons:</p>
-    <br>
+      <br>
+
         <ul class="text-hp">
           <li>Control: With VPS hosting, you have complete control over the operating system, software, and applications your site runs on.
         You can install whatever you want, and you can even install separate servers for different purposes if you need to.
       This flexibility is a big advantage over shared hosting, where the host provider controls everything.</li>
           <br>
+
           <li>Security: With VPS hosting, you’re protected from a whole host of security threats.
         Your site is hosted on a separate server, which makes it harder for hackers to gain access. Plus, if you use a reputable provider,
           your site will be backed up regularly, so you’ll always have a copy of your data.</li>
     </ul>
-
-      <br>
-      <br>
+      <br><br>
 
     <h1 class="title-homepage">OUR LOCALS </h1>
       <Splide :options="{ rewind: true }" aria-label="Vue Splide Example">
@@ -52,9 +50,8 @@
     <br>
     <router-link class="button-28" to = '/BuilderChoice' >YES !</router-link>
     <br><br><br>
-    
-      
   </div>
+
 </template>
 
 <script>
