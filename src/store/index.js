@@ -1,6 +1,5 @@
 import { createStore } from 'vuex'
-//import Vue from 'vue';
-//import Vuex from "vuex";
+import { keys, getAll } from "../idb";
 
 const store = createStore({
     state:{
@@ -664,6 +663,13 @@ const store = createStore({
             },  
         },
     },
+    actions: {
+        async POPULATE_FROM_CACHE({ state }) {
+            let [keyss, values] = await Promise.all([keys(), getAll()])
+            state.translations = keyss.map((key, index) => ({ id: key, name: values[index] }))
+        }
+
+    },
     getters: {
         getView(state) {
             return state.view;
@@ -676,9 +682,10 @@ const store = createStore({
         setView(state, newView){
             state.view = newView;
         },
+        setFieldsValues(state, budget){
+            state.datas.OS.Windows["LOW BUDGET"] = budget;
+        }
     },
-
-    saveForm:(state, window) => {state.saveForm = window;}
 });
 
 

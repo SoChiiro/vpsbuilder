@@ -18,13 +18,13 @@
             <h2>{{name}}</h2>
           </div>
           <div class="form">
-            <form action="">
+            <form @submit.prevent = "submitForm(budget.inputs)">
              <FormGroup
               :fields="budget"
               />
               <p class="cost" >{{cost(budget.inputs)}} €/month</p>
               <div class="form-buttons">
-                <button type="submit" @click="submitForm()">submit</button>
+                <button type="submit">submit</button>
               </div>
             </form>
           </div>
@@ -60,23 +60,7 @@ export default {
       var saveFormW = this.$store.state.saveForm;
       this.$store.commit('saveFormW');
     },
-      submitForm(inputs, memory)
-      {
-        console.log('Form completed');
-        memory =
-            inputs['CPU CORE'].value
-            + inputs['CPU FREQUENCY'].value
-            + inputs['RAM'].value
-            + inputs['STORAGE'].value
-            + inputs['VERSION'].value
-            + inputs['PRICE'].value ;
 
-        console.log(memory);
-
-        localStorage.setItem('CPU CORE', memory)
-        var displayCUPCORE = localStorage.getItem('CPU CORE');
-        displayCUPCORE;
-      }
     },
   computed:{
     windowsFields(){ return this.$store.getters.getDatas.OS.Windows },

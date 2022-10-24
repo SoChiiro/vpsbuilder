@@ -38,11 +38,12 @@ import { router } from '@/router';
       components: { FormGroup },
       methods:{
         switchToRegister() {this.$store.commit('setView','register')},
-        switchToHome() {this.$store.commit('setView','home')},
+        switchToHome() {
+          this.$store.commit('setView','home')},
         logIn(){
           if(this.loginFields.inputs.pseudo.value === "ZERO" && this.loginFields.inputs.password.value === "ZER@"){
             this.switchToHome()
-            router.push("/home")
+            router.push("/")
           }else{
             this.error = true
           }

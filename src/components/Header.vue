@@ -27,7 +27,8 @@ export default {
     }
   },
   methods:{
-    switchToLogin() {this.$store.commit('setView','login')}
+    switchToLogin() {this.$store.commit('setView','login')
+    }
       },
 }
 </script>
