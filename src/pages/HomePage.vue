@@ -67,6 +67,7 @@ export default defineComponent( {
   name : "HomePage",
   components: { Splide, SplideSlide },
 } );
+
 </script>
 
 <style scoped>
