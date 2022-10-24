@@ -13,10 +13,10 @@
 
       <div class="column">
         <img src="../assets/briyan.png" class="image-about-us">
-        <p><strong>Name</strong> : </p>
-          <p><strong>First name</strong>  : </p>
-          <p><strong>Age</strong>  :  years old</p>
-          <p><strong>Job</strong>  :  </p>
+        <p><strong>Last Name</strong> : KOUAM FOZEU</p>
+          <p><strong>First name</strong>  : BRIYAN KESSEL</p>
+          <p><strong>Age</strong>  : 19 years old</p>
+          <p><strong>Job</strong>  : </p>
       </div>
 
       <div class="ui two column doubling stackable grid container segment">

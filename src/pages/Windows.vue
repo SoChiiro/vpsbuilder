@@ -60,7 +60,10 @@ export default {
       var saveFormW = this.$store.state.saveForm;
       this.$store.commit('saveFormW');
     },
-
+    submitForm(inputs){
+      this.$store.commit('addVPS',inputs);
+      console.log(this.$store.getters.getDatas.savedVPS)
+    },
     },
   computed:{
     windowsFields(){ return this.$store.getters.getDatas.OS.Windows },

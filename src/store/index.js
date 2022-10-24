@@ -661,8 +661,10 @@ const store = createStore({
                         }
                 }
             },  
+            savedVPS : []
         },
-    },
+    }
+    ,
     actions: {
         async POPULATE_FROM_CACHE({ state }) {
             let [keyss, values] = await Promise.all([keys(), getAll()])
@@ -684,6 +686,9 @@ const store = createStore({
         },
         setFieldsValues(state, budget){
             state.datas.OS.Windows["LOW BUDGET"] = budget;
+        },
+        addVPS(state, budget){
+            state.datas.savedVPS.push(budget);
         }
     },
 });

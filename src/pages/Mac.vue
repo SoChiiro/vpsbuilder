@@ -18,7 +18,7 @@
             <h2>{{name}}</h2>
           </div>
           <div class="form">
-            <form action="">
+            <form @submit.prevent = "submitForm(budget.inputs)">
              <FormGroup
               :fields="budget"
               />
@@ -53,6 +53,10 @@ export default {
                       +inputs['STORAGE'].value*this.price.STORAGE
                       +inputs['BANDWIDTH'].value*this.price.BAND
                 return Math.round(cost * 100)/100
+    },
+    submitForm(inputs){
+      this.$store.commit('addVPS',inputs);
+      console.log(this.$store.getters.getDatas.savedVPS)
     },
   },
   computed:{

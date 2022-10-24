@@ -15,6 +15,7 @@ import Windows from "@/pages/Windows";
 import Linux from "@/pages/Linux";
 import Mac from "@/pages/Mac";
 import aboutUs from "@/pages/AboutUs";
+import VPSPage from "@/pages/VPSPage";
 
 export default {
   name: 'App',
@@ -29,7 +30,9 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     Windows,Linux,Mac,
     // eslint-disable-next-line vue/no-unused-components
-    aboutUs
+    aboutUs,
+    // eslint-disable-next-line vue/no-unused-components
+    VPSPage
   },
   computed:{
     view() { return this.$store.getters.getView }

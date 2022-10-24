@@ -18,7 +18,7 @@
             <h2>{{name}}</h2>
           </div>
           <div class="form">
-            <form action="">
+            <form @submit.prevent = "submitForm(budget.inputs)">
              <FormGroup
               :fields="budget"
               />
@@ -55,6 +55,13 @@ export default {
           + inputs['BANDWIDTH'].value * this.price.BAND
       return Math.round(cost * 100) / 100
     },
+    submitForm(inputs){
+      let copyInputs = { ...inputs }
+      copyInputs['OS'] = { "value" : "Linux" };
+      console.log(copyInputs)
+      this.$store.commit('addVPS',copyInputs);
+    },
+
   },
     computed: {
       linuxFields() {

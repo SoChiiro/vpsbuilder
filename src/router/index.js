@@ -6,9 +6,9 @@ const routes = [
         path : '/',
         component: () => import("@/pages/HomePage")
     },    {
-        name: 'Builder',
-        path : '/buildVPS',
-        // component: () => import("@/pages/BuilderPage")
+        name: 'VPSPage',
+        path : '/myvps',
+        component: () => import("@/pages/VPSPage")
     },    {
         name: 'Login',
         path : '/login',
@@ -29,15 +29,15 @@ const routes = [
     {
         name: 'Linux',
         path : '/Linux',
-        component: () => import("../pages/Linux")
+        component: () => import("@/pages/Linux")
     },{
         name: 'Mac',
         path : '/Mac',
-        component: () => import("../pages/Mac")
+        component: () => import("@/pages/Mac")
     },{
         name: 'AboutUs',
         path : '/AboutUs',
-        component: () => import("../pages/AboutUs")
+        component: () => import("@/pages/AboutUs")
     },
 
 ];
