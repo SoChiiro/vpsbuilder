@@ -168,7 +168,7 @@ Splide {
 }
 
 .cost{
-  color: aqua;
+  color: white;
   text-align : center;
   font-size: 40px;
   font-weight: bold;

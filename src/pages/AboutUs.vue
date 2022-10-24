@@ -21,13 +21,15 @@
 
       <div class="ui two column doubling stackable grid container segment">
         <div class="column">
-          <img src="../assets/thomas-pdp.jpg" class="image-about-us">
-          <p>blablablablabla</p>
+          <img src="../assets/p-i.png" class="image-about-us">
+          <p>Nelson Fossi </p>
+          <p>?</p>
         </div>
 
         <div class="column">
-          <img src="../assets/thomas-pdp.jpg" class="image-about-us">
-          <p>blablabla</p>
+          <img src="../assets/p-i.png" class="image-about-us">
+          <p>Clément</p>
+          <p>?</p>
         </div>
       </div>
 

@@ -1,4 +1,6 @@
 import { createStore } from 'vuex'
+//import Vue from 'vue';
+//import Vuex from "vuex";
 
 const store = createStore({
     state:{
@@ -674,7 +676,10 @@ const store = createStore({
         setView(state, newView){
             state.view = newView;
         },
-    }
+    },
+
+    saveForm:(state, window) => {state.saveForm = window;}
 });
+
 
 export default store;

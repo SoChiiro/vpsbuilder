@@ -46,20 +46,24 @@ export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: 'Linux',
   components: { Splide, SplideSlide, FormGroup },
-  methods:{
-    cost(inputs){ 
-                const cost = inputs['CPU CORE'].value*this.price.CORE
-                      +inputs['CPU FREQUENCY'].value*this.price.FREQ
-                      +inputs['RAM'].value*this.price.RAM
-                      +inputs['STORAGE'].value*this.price.STORAGE
-                      +inputs['BANDWIDTH'].value*this.price.BAND
-                return Math.round(cost * 100)/100
+  methods: {
+    cost(inputs) {
+      const cost = inputs['CPU CORE'].value * this.price.CORE
+          + inputs['CPU FREQUENCY'].value * this.price.FREQ
+          + inputs['RAM'].value * this.price.RAM
+          + inputs['STORAGE'].value * this.price.STORAGE
+          + inputs['BANDWIDTH'].value * this.price.BAND
+      return Math.round(cost * 100) / 100
     },
-  computed:{
-    linuxFields(){ return this.$store.getters.getDatas.OS.Linux },
-    price(){ return this.$store.getters.getDatas.PRICE },
+  },
+    computed: {
+      linuxFields() {
+        return this.$store.getters.getDatas.OS.Linux
+      },
+      price() {
+        return this.$store.getters.getDatas.PRICE
+      },
     },
-  }
 }
 </script>
 

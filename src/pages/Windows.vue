@@ -24,7 +24,7 @@
               />
               <p class="cost" >{{cost(budget.inputs)}} €/month</p>
               <div class="form-buttons">
-                <button type="submit">submit</button>
+                <button type="submit" @click="submitForm()">submit</button>
               </div>
             </form>
           </div>
@@ -47,24 +47,49 @@ export default {
   name: 'Windows',
   components: { Splide, SplideSlide, FormGroup },
   methods:{
-    cost(inputs){ 
-                const cost = inputs['CPU CORE'].value*this.price.CORE
-                      +inputs['CPU FREQUENCY'].value*this.price.FREQ
-                      +inputs['RAM'].value*this.price.RAM
-                      +inputs['STORAGE'].value*this.price.STORAGE
-                      +Math.round(inputs['VERSION'].value)*this.price.BAND
-                return Math.round(cost * 100)/100
+    cost(inputs) {
+      const cost = inputs['CPU CORE'].value * this.price.CORE
+          + inputs['CPU FREQUENCY'].value * this.price.FREQ
+          + inputs['RAM'].value * this.price.RAM
+          + inputs['STORAGE'].value * this.price.STORAGE
+          + Math.round(inputs['VERSION'].value) * this.price.BAND
+      return Math.round(cost * 100) / 100
     },
-  },
+    getForm(){
+      // eslint-disable-next-line no-unused-vars
+      var saveFormW = this.$store.state.saveForm;
+      this.$store.commit('saveFormW');
+    },
+      submitForm(inputs, memory)
+      {
+        console.log('Form completed');
+        memory =
+            inputs['CPU CORE'].value
+            + inputs['CPU FREQUENCY'].value
+            + inputs['RAM'].value
+            + inputs['STORAGE'].value
+            + inputs['VERSION'].value
+            + inputs['PRICE'].value ;
+
+        console.log(memory);
+
+        localStorage.setItem('CPU CORE', memory)
+        var displayCUPCORE = localStorage.getItem('CPU CORE');
+        displayCUPCORE;
+      }
+    },
   computed:{
     windowsFields(){ return this.$store.getters.getDatas.OS.Windows },
     price(){ return this.$store.getters.getDatas.PRICE },
     },
 }
 
-localStorage.setItem('name','Chris');
-var myName = localStorage.getItem('name');
-myName;
+// eslint-disable-next-line no-unused-vars
+function display (){
+  this.getForm();
+}
+
+
 
 </script>
 
@@ -134,10 +159,6 @@ input[type="text"], #country_selection {
   text-transform: uppercase;
   width: 100%
 }
-
-#country_selection {
-  padding: 0 !important;
-}
 input[type="text"]:focus {
   outline: none;
 }
@@ -168,7 +189,7 @@ button:hover {
   color : gold;
 }
 .cost{
-  color: aqua;
+  color: #2596be;
   text-align : center;
   font-size: 40px;
   font-weight: bold;
